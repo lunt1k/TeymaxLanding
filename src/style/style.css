@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: neue-haas-grotesk-display, sans-serif;
+}
+
+.first-block {
+    width: 100%;
+    height: 950px;
+    background-color: #181A21;
+    margin-bottom: 150px;
+}
+
+.container {
+    padding: 0 150px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vertical-menu-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.vertical-menu{
+    padding-top: 16%;
+    max-width: 112px;
+}
+
+.vertical-menu a {
+    display: block;
+    padding: 20px 0 20px 20px;
+    text-decoration: none;
+}
+
+.vertical-menu a{
+    color: #858689;
+}
+.black-color {
+    color: black;
+}
+
+.vertical-menu-black {
+    max-width: 112px;
+}
+
+.vertical-menu-black a {
+    color: black;
+    display: block;
+    padding: 20px 0 20px 20px;
+    text-decoration: none;
+}
+
+/* .teymax-menu>a::before {
+    display: block;
+    content: "";
+    background-image: url('../img/StarMenu.svg');
+    background-size: 14px 14px; 
+    height: 14px;
+    background-repeat: no-repeat; 
+    width: 14px;
+} */
+.teymax-menu-item {
+    display: flex;
+}
+
+.teymax-menu-item>img {
+    visibility: hidden;
+}
+
+.grey-text {
+    color: #858689;
+}
+
+.about-me #about-us-menu>img {
+    visibility: visible;
+}
+
+.teymax-top-menu {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2.875rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.teymax-top-menu img:nth-child(1) {
+    padding-right: 10px;
+}
+
+.teymax-menu {
+    position: relative;
+}
+
+.about-me .active-nav-link {
+    color: #F1F1F1;
+}
+
+.header-block h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 119px;
+    line-height: 100%;
+    color: white;
+    max-width: 1318px;
+    padding-top: 15%;
+}
+
+.description-header p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 165%;
+    color: white;
+}
+
+.description-header {
+    max-width: 440px;
+}
+
+.technologies #technologies img {
+    visibility: visible;
+}
