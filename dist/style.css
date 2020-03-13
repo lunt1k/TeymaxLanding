@@ -5,8 +5,9 @@ body {
 
 .first-block {
     width: 100%;
-    height: 88vh;
+    height: 950px;
     background-color: #181A21;
+    margin-bottom: 150px;
 }
 
 .container {
@@ -16,37 +17,68 @@ body {
     justify-content: space-between;
 }
 
-.vertical-menu {
+.vertical-menu-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.vertical-menu{
     padding-top: 16%;
     max-width: 112px;
 }
 
 .vertical-menu a {
-    color: white;
-    /* Black text color */
     display: block;
-    /* Make the links appear below each other */
-    padding: 12px;
-    /* Add some padding */
+    padding: 20px 0 20px 20px;
     text-decoration: none;
-    /* Remove underline from links */
 }
 
-.teymax-menu > a::before{
+.vertical-menu a{
+    color: #858689;
+}
+.black-color {
+    color: black;
+}
+
+.vertical-menu-black {
+    max-width: 112px;
+}
+
+.vertical-menu-black a {
+    color: black;
+    display: block;
+    padding: 20px 0 20px 20px;
+    text-decoration: none;
+}
+
+/* .teymax-menu>a::before {
+    display: block;
     content: "";
-    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z' fill='%23F1F1F1'/%3E %3C/svg%3E");
-}
-.vertical-menu a:hover {
-    background-color: #ccc;
-    /* Dark grey background on mouse-over */
+    background-image: url('../img/StarMenu.svg');
+    background-size: 14px 14px; 
+    height: 14px;
+    background-repeat: no-repeat; 
+    width: 14px;
+} */
+.teymax-menu-item {
+    display: flex;
 }
 
-.vertical-menu a.active {
-    background-color: #4CAF50;
-    /* Add a green color to the "active/current" link */
-    color: white;
+.teymax-menu-item>img {
+    visibility: hidden;
 }
-.teymax-top-menu{
+
+.grey-text {
+    color: #858689;
+}
+
+.about-me #about-us-menu>img {
+    visibility: visible;
+}
+
+.teymax-top-menu {
     display: flex;
     align-items: center;
     padding-bottom: 2.875rem;
@@ -55,13 +87,20 @@ body {
     font-size: 14px;
     line-height: 100%;
 }
-.teymax-top-menu img:nth-child(1){
+
+.teymax-top-menu img:nth-child(1) {
     padding-right: 10px;
 }
-.active-nav-link{
+
+.teymax-menu {
+    position: relative;
+}
+
+.about-me .active-nav-link {
     color: #F1F1F1;
 }
-.header-block h1{
+
+.header-block h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 119px;
@@ -70,15 +109,21 @@ body {
     max-width: 1318px;
     padding-top: 15%;
 }
-.description-header p{
+
+.description-header p {
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 165%;
     color: white;
 }
-.description-header{
+
+.description-header {
     max-width: 440px;
+}
+
+.technologies #technologies img {
+    visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map*/
