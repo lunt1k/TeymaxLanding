@@ -34,7 +34,8 @@ module.exports = {
             options: {}
         }
       }
-    ]
+    ],
+    
   },
   plugins: [
     new HtmlWebpackPlugin({  // Also generate a test.html
