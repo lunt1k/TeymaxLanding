@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: neue-haas-grotesk-display, sans-serif;
+    font-family: 'Neue Haas Grotesk Display Pro';
 }
 
 .first-block {
@@ -39,11 +39,12 @@ h1 {
 .center-section {
     flex: 1 1 1250px;
     max-width: 1250px;
+    max-width: 1318px;
 }
 
 .vertical-menu-text {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     line-height: 100%;
 }
@@ -52,35 +53,38 @@ h1 {
     padding-top: 16%;
     display: flex;
     flex-direction: column;
-    flex: 1 3 230px;
+    flex: 1 3 370px;
     max-width: 370px;
 }
 .vertical-menu-empty{
     display: flex;
     flex-direction: column;
-    flex: 15 3 230px;
+    flex: 1 3 370px;
     max-width: 370px;
 }
 .vertical-menu a {
     display: block;
-    padding: 20px 0 20px 20px;
+    padding: 15px 0 15px 15px;
     text-decoration: none;
 }
-
+.achievement-block{
+    width: 100%;
+    max-width: 1065px;
+}
 .vertical-menu a {
     color: #858689;
 }
 
 .vertical-menu-black {
     display: flex;
-    flex: 1 3 230px;
+    flex: 1 3 370px;
     max-width: 370px;
 }
 
 .vertical-menu-black a {
     color: #858689;
     display: block;
-    padding: 20px 0 20px 20px;
+    padding: 15px 0 15px 15px;
     text-decoration: none;
 }
 
@@ -117,7 +121,7 @@ h1 {
 .teymax-top-menu {
     display: flex;
     align-items: center;
-    padding-bottom: 2.875rem;
+    padding-bottom: 1.5rem;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -139,7 +143,7 @@ h1 {
 }
 
 .description-header {
-    margin: 100px 0;
+    padding: 6.25rem 0;
 }
 
 .about-me .active-nav-link {
@@ -153,7 +157,7 @@ h1 {
     line-height: 100%;
     color: white;
     max-width: 1318px;
-    padding-top: 15%;
+    padding-top: 20%;
 }
 
 .description-header p {
@@ -198,14 +202,14 @@ h1 {
 
 .about-us-info p {
     margin-top: 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 46px;
-    line-height: 160%;
+    line-height: 74px;
 }
 
 .about-us-info span {
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 46px;
     line-height: 160%;
 }
@@ -254,6 +258,7 @@ h1 {
 
 .total-hours-worked {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 1250px;
     margin: 150px 0 200px;
@@ -268,13 +273,13 @@ h1 {
     line-height: 100%;
     /* identical to box height, or 400px */
 
-    font-feature-settings: 'pnum'on, 'lnum'on;
+    width: 100%;
 }
 
 .vertical-text {
     display: flex;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 46px;
     line-height: 55px;
     align-items: center;
@@ -283,7 +288,6 @@ h1 {
     /* MainColor / Black */
 
     color: #181A21;
-    writing-mode: sideways-lr;
 }
 
 .second-block-container {
@@ -333,7 +337,7 @@ h1 {
     max-width: 440px;
     width: 100%;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 46px;
     line-height: 55px;
     padding-bottom: 25px;
@@ -342,7 +346,7 @@ h1 {
 .description-category {
     width: 100%;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 165%;
     vertical-align: middle;
@@ -354,21 +358,17 @@ h1 {
     margin-bottom: 75px;
 }
 
-.design-category {
-    margin-bottom: 300px;
-}
-
 .technologies {
     max-width: 1250px;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 9.375rem;
 }
 
 .technologies-name-block {
     width: 50%;
     display: flex;
     align-items: center;
-    margin: 125px 0;
+    padding: 7.8125rem 0;
 }
 
 .technologies-info-section {
@@ -387,8 +387,11 @@ h1 {
     flex-flow: column;
     max-width: 1250px;
     flex: 3 1 1200px;
+    padding-bottom: 12.75rem;
 }
-
+.techologies-block > .technologies-section:last-child{
+    border-bottom: none;
+}
 .technologies-section {
     display: flex;
     width: 100%;
@@ -454,14 +457,14 @@ h1 {
 
 .meet-people-header {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 119px;
     line-height: 110%;
     /* identical to box height, or 131px */
 
     letter-spacing: 0.03em;
     color: #F1F1F1;
-    margin-bottom: 205px;
+    padding-bottom: 205px;
     padding-top: 150px;
 }
 
@@ -470,7 +473,7 @@ h1 {
 }
 
 .meet-people-section>.top-info-hr {
-    color: #F1F1F1;
+    border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 }
 
 .meet-people-section>.top-info-hr hr {
@@ -480,7 +483,6 @@ h1 {
 
 .fullstack-category {
     display: flex;
-    height: 420px;
     border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 }
 
@@ -488,7 +490,7 @@ h1 {
     max-width: 440px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     padding-left: 40px;
     box-sizing: border-box;
@@ -505,6 +507,9 @@ h1 {
     display: flex;
     justify-content: center;
 }
+.name-category-item{
+    height: 70px;
+}
 
 .name-category p {
     font-size: 16px;
@@ -515,7 +520,7 @@ h1 {
 
 .people-example {
     width: 100%;
-    margin: auto 0;
+    margin: 3.125rem 0;
 }
 
 .people-example-item {
@@ -525,6 +530,7 @@ h1 {
     border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 }
 
+
 .name-job-people {
     display: flex;
     min-width: 168px;
@@ -532,7 +538,7 @@ h1 {
 
 .name-job-people span {
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.05em;
@@ -543,7 +549,7 @@ h1 {
 
 .name-surname-people {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 140%;
 }
@@ -557,14 +563,13 @@ h1 {
 .linkedIn-profile a {
     text-decoration: none;
     color: #F1F1F1;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 140%;
 }
 
 .frontend-category {
     display: flex;
-    height: 420px;
     border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 }
 
@@ -578,26 +583,27 @@ h1 {
 
 .backend-category {
     display: flex;
-    height: 420px;
     border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 }
 
 .sales-category {
     display: flex;
-    height: 420px;
+    padding-bottom: 8.2rem;
 }
-
-.ceo-block {
+.people-example-item:hover{
     background-color: #F1F1F1;
     color: #181A21;
 }
-
-.ceo-block>.name-job-people span {
+.people-example-item:hover span {
     color: #181A21;
 }
 
-.ceo-block .linkedIn-profile>a {
+.people-example-item:hover a {
     color: #181A21;
+}
+
+.people-example-item:hover path {
+    stroke: #181A21;
 }
 
 .linkedIn-profile svg {
@@ -663,7 +669,6 @@ h1 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    min-height: 950px;
     background-color: #181A21;
     padding-top: 250px;
 }
@@ -671,7 +676,7 @@ h1 {
 .ready-block {
     width: 100%;
     max-width: 370px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 119px;
     line-height: 110%;
     color: #F1F1F1;
@@ -682,7 +687,7 @@ h1 {
 }
 
 .discuss-project-block {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 119px;
     line-height: 110%;
     color: #F1F1F1;
@@ -701,12 +706,17 @@ h1 {
 }
 
 .skype-link-block {
-    margin-right: 2rem;
+    padding-right: 3.3rem;
 }
-
+.social-media svg{
+    padding-left: 1.25rem;
+}
+.linkedin-block svg{
+    padding-left: 1.875rem;
+}
 .email-block a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #F1F1F1;
@@ -777,7 +787,7 @@ h1 {
 footer {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 }
 
@@ -787,21 +797,22 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 40%;
 }
 .address{
     width: 100%;
     max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .footer-nav-block{
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-top: 14%;
 }
 
 .address p {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 100%;
     color: #F1F1F1;
@@ -814,10 +825,10 @@ footer {
 
 .footer-item a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     line-height: 100%;
-    color: #F1F1F1;
+    color: #9A9B9E;
 }
 
 .social-media {
@@ -827,9 +838,15 @@ footer {
     max-width: 370px;
 }
 
+.top-info-hr{
+    padding-bottom: 30px;
+    margin-bottom: 6.25rem;
+    border-bottom: 1px solid #181A21;
+}
+
 .social-media a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #F1F1F1;
@@ -880,7 +897,9 @@ footer {
     transform: translateY(-50%);
     background: rgba(0, 0, 0, .5);
 }
-
+.third-block .top-info-hr{
+    margin-bottom: 0;
+}
 .slider__control_left {
     left: 0;
 }
@@ -936,6 +955,11 @@ footer {
 }
 .fifth-block-container{
     justify-content: space-between;
+    padding-bottom: 14.5rem;
+}
+footer{
+    background-color: #181A21;
+    padding-bottom: 6.25rem;
 }
 
 
@@ -1083,6 +1107,7 @@ footer {
         display: flex;
         flex-flow: column;
         width: 100%;
+        
     }
     .performance-category{
         padding: 15% 2% 0 2%;
