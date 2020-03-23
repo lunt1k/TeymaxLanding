@@ -331,6 +331,7 @@ h1 {
     display: flex;
     flex-flow: column;
     flex: 3 1 1200px;
+    padding-left: 23.125rem;
 }
 
 .header-category {
@@ -388,6 +389,7 @@ h1 {
     max-width: 1250px;
     flex: 3 1 1200px;
     padding-bottom: 12.75rem;
+    padding-left: 23.125rem;
 }
 .techologies-block > .technologies-section:last-child{
     border-bottom: none;
@@ -453,6 +455,7 @@ h1 {
     flex-direction: column;
     flex: 3 1 1200px;
     max-width: 1250px;
+    padding-left: 23.125rem;
 }
 
 .meet-people-header {
@@ -631,6 +634,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-flow: row;
+    padding-left: 23.125rem
 }
 
 .customers-header .vertical-menu {
@@ -640,6 +644,7 @@ h1 {
 .customers-header .top-link-info {
     padding-top: 150px;
     width: 100%;
+    padding-left: 23.125rem
 }
 
 .customers-header p {
