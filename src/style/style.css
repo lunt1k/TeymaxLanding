@@ -5,7 +5,7 @@ body {
 
 .first-block {
     width: 100%;
-    height: 950px;
+    min-height: 950px;
     background-color: #181A21;
     margin-bottom: 150px;
     display: flex;
@@ -55,7 +55,12 @@ h1 {
     flex: 1 3 230px;
     max-width: 370px;
 }
-
+.vertical-menu-empty{
+    display: flex;
+    flex-direction: column;
+    flex: 15 3 230px;
+    max-width: 370px;
+}
 .vertical-menu a {
     display: block;
     padding: 20px 0 20px 20px;
@@ -69,6 +74,7 @@ h1 {
 .vertical-menu-black {
     display: flex;
     flex: 1 3 230px;
+    max-width: 370px;
 }
 
 .vertical-menu-black a {
@@ -272,11 +278,12 @@ h1 {
     font-size: 46px;
     line-height: 55px;
     align-items: center;
+    white-space: nowrap;
 
     /* MainColor / Black */
 
     color: #181A21;
-    transform: rotate(-90deg);
+    writing-mode: sideways-lr;
 }
 
 .second-block-container {
@@ -682,10 +689,6 @@ h1 {
     max-width: 440px;
 }
 
-.fifth-block>.container {
-    justify-content: start;
-    flex-wrap: wrap;
-}
 
 .email-section {
     display: flex;
@@ -753,6 +756,7 @@ h1 {
 .btn-email {
     display: flex;
     width: 100%;
+    min-width: 300px;
     height: 80px;
     background-color: #181A21;
     border: 1px solid white;
@@ -783,9 +787,18 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 35%;
+    margin-top: 40%;
 }
-
+.address{
+    width: 100%;
+    max-width: 440px;
+}
+.footer-nav-block{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 14%;
+}
 
 .address p {
     font-weight: 600;
@@ -808,8 +821,10 @@ footer {
 }
 
 .social-media {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 370px;
 }
 
 .social-media a {
@@ -910,17 +925,127 @@ footer {
     margin-right: 6.25rem;
 }
 
+.vertical-text span{
+    transform: rotate(-90deg);
+}
+
+.ready-discuss-block{
+    display: flex;
+    max-width: 810px;
+    width: 100%;
+}
+.fifth-block-container{
+    justify-content: space-between;
+}
 
 
-@media (max-width: 576px) {}
+@media only screen and (max-width : 321px) {
 
-@media (max-width: 768px) {}
+}
 
-@media (max-width: 992px) {}
+@media only screen and (max-width : 640px) {
+    .small-description-block{
+        max-width: none;
+    }
+    .separate-info-block-left > .small-description-block{
+        flex-direction: row-reverse;
+    }
+    .category-item{
+        flex-wrap: wrap;
+    }
+    .design-category{
+        margin-bottom: 8rem;
+    }
+    .technologies-section{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .technologies-name-block{
+        margin: 4rem 0;
+    }
+    .technologies-info-section{
+        margin-bottom: 3rem;
+    }
+}
 
-@media (max-width: 1200px) {}
+@media only screen and (max-width: 768px) {
+    .header-block h1{
+        font-size: 11.198vw;
+    }
+    .customers-logo{
+        flex-wrap: wrap; 
+    }
+    .lone-star-media{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .git-games{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .stick-cactus{
+        margin-top: 2rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .work-for-impact{
+        margin-top: 2rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .fifth-block > .container{
+        flex-wrap: wrap;
+    }
+    .email-section{
+        margin-top: 4rem;
+        justify-content: flex-start; 
+    }
+    .skype-upwork-links{
+        margin-bottom: 1rem;
+    }
+}
 
-@media (max-width: 1480px) {
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width : 1224px) {
+    .total-hours{
+        font-size: 30vw;
+    }
+    .vertical-text{
+        font-size: 3.5vw;
+    }
+    .ready-block{
+        font-size: 8.198vw;
+        max-width: 320px;
+    }
+    .discuss-project-block{
+        font-size: 8.198vw;
+        margin-right: 2rem;
+    }
+    .technologies-name{
+        font-size: 8.198vw;
+    }
+    .technologies-name-block{
+        width: 80%;
+        max-width: 563px;
+    }
+    .technologies-info-block{
+        width: 100%;
+        max-width: 193px;
+    }
+    .fourth-block > .container{
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1480px) {
     .teymax-menu {
         flex-flow: row wrap;
     }
@@ -954,11 +1079,19 @@ footer {
     }
 
     .center-section {
-        padding: 0 2rem;
+        padding: 0 2%;
         display: flex;
         flex-flow: column;
+        width: 100%;
     }
-
+    .performance-category{
+        padding: 15% 2% 0 2%;
+        box-sizing: border-box;
+    }
+    .customers-header>.container{
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
     .description-header {
         padding-top: 4rem;
     }
@@ -968,12 +1101,20 @@ footer {
     }
 
     .fifth-block .container:last-child {
-        padding: 0 3rem 0 1rem;
+        padding: 0 1rem;
     }
 
-    .email-section {}
+    .vertical-menu-empty{
+        display: none;
+    }
+    .container{
+        justify-content: center;
+        max-width: 1250px;
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
 }
-@media (max-width: 1620px){
+@media only screen and (max-width: 1620px){
     .first-block{
         padding: 0 2%;
         box-sizing: border-box;
@@ -1003,16 +1144,32 @@ footer {
     .fifth-block{
         padding: 10% 2% 0 2%;
         box-sizing: border-box;
-
+        justify-content: space-evenly;
+    }
+    .performance-info-block{
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
+    .footer-nav{
+        padding: 0 5%;
     }
 }
-@media (max-width: 1770px) {
+@media only screen and (max-width: 1770px) {
     .black-square {
         display: none;
     }
 
     .customers-header {
         justify-content: center;
+    }
+}
+@media only screen and (min-width: 1920px){
+    .ready-block {
+        font-size: 6.198vw;
+    }
+    
+    .discuss-project-block {
+        font-size: 6.198vw;
     }
 }
 
