@@ -957,6 +957,7 @@ footer {
     display: flex;
     max-width: 810px;
     width: 100%;
+    justify-content: space-between;
 }
 .fifth-block-container{
     justify-content: space-between;
@@ -967,7 +968,16 @@ footer{
     padding-bottom: 6.25rem;
 }
 
-
+@media only screen and (min-width: 1024px) and (max-width: 1620px){
+    .ready-block{
+        font-size: 8.198vw;
+        max-width: 320px;
+    }
+    .discuss-project-block{
+        font-size: 8.198vw;
+        margin-right: 2rem;
+    }
+}
 @media only screen and (max-width : 321px) {
 
 }
@@ -1001,8 +1011,21 @@ footer{
     .header-block h1{
         font-size: 11.198vw;
     }
+    .ready-block{
+        font-size: 13.198vw;
+        max-width: 320px;
+    }
+    .discuss-project-block {
+        font-size: 13.198vw;
+    }
+    .email-block{
+        padding-top: 1rem;
+    }
     .customers-logo{
         flex-wrap: wrap; 
+    }
+    .btn-email{
+        margin-top: 3.5rem;
     }
     .lone-star-media{
         width: 50%;
@@ -1037,27 +1060,54 @@ footer{
     .skype-upwork-links{
         margin-bottom: 1rem;
     }
+    .email-block{
+        max-width: none;
+    }
+    footer > .container {
+        padding: 3.5rem 4%;
+        flex-direction: column;
+    }
+    .social-media{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: none;
+        padding-bottom: 3.5rem;
+    }
+    .footer-nav-block{
+        justify-content: space-between;
+        padding: 0;
+    }
+    .footer-nav-block{
+        padding: 1.5rem 0;
+    }
 }
 
 @media only screen and (max-width: 992px) {
 
 }
-
-@media only screen and (max-width : 1224px) {
+@media only screen and (max-width: 1224px) and (min-width: 1024px){
+    .email-block{
+        max-width: 400px;
+    }
+    .address{
+        align-items: flex-end;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .fifth-block > .container{
+        padding: 0 0 10rem 0;
+    }
+}
+@media only screen and (max-width: 1224px) {
     .total-hours{
         font-size: 30vw;
     }
     .vertical-text{
         font-size: 3.5vw;
     }
-    .ready-block{
-        font-size: 8.198vw;
-        max-width: 320px;
-    }
-    .discuss-project-block{
-        font-size: 8.198vw;
-        margin-right: 2rem;
-    }
+    
+    
     .technologies-name{
         font-size: 8.198vw;
     }
@@ -1072,11 +1122,33 @@ footer{
     .fourth-block > .container{
         padding: 0;
     }
+    footer{
+        padding-bottom: 3rem;
+    }
+    footer > .container{
+        justify-content: space-between;
+    }
+    .social-media{
+        min-width: 150px;
+        width: auto;
+    }
+    .address{
+        min-width: 270px;
+        width: auto;
+    }
+    
 }
 
 @media only screen and (max-width: 1480px) {
     .teymax-menu {
         flex-flow: row wrap;
+    }
+    .customers-block{
+        padding: 0;
+    }
+    .customers-header .top-link-info{
+        padding-left: 0;
+        border-bottom: 1px solid rgba(24, 26, 33, 0.3);
     }
 
     .teymax-top-menu {
@@ -1130,10 +1202,6 @@ footer{
         width: 100%;
     }
 
-    .fifth-block .container:last-child {
-        padding: 0 1rem;
-    }
-
     .vertical-menu-empty{
         display: none;
     }
@@ -1143,8 +1211,14 @@ footer{
         padding: 0 2%;
         box-sizing: border-box;
     }
+    .techologies-block{
+        padding-left: 0;
+    }
+    .meet-people-section{
+        padding-left: 0;
+    }
 }
-@media only screen and (max-width: 1620px){
+@media only screen and (max-width: 1620px) {
     .first-block{
         padding: 0 2%;
         box-sizing: border-box;
