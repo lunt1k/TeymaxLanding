@@ -37,6 +37,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1"
+    "@glidejs/glide": "^3.4.1",
+    "tiny-slider": "^2.9.2"
   }
 }
