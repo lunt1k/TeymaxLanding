@@ -1,62 +1,61 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin= require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: [
-    './src/js/index.js',
-  ],
+  entry: ['./src/js/index.js'],
   output: {
-    filename: './js/bundle.js'
+    filename: './js/bundle.js',
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src/js'),
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.svg/,
         use: {
-            loader: 'svg-url-loader',
-            options: {}
-        }
-      }
+          loader: 'svg-url-loader',
+          options: {},
+        },
+      },
     ],
-    
   },
   plugins: [
-    new HtmlWebpackPlugin({  // Also generate a test.html
-        filename: 'index.html',
-        template: 'src/index.html'
+    new HtmlWebpackPlugin({
+      // Also generate a test.html
+      filename: 'index.html',
+      template: 'src/index.html',
     }),
-    new CopyWebpackPlugin([{
+    new CopyWebpackPlugin([
+      {
         from: './src/fonts',
-        to: './fonts'
+        to: './fonts',
       },
       {
         from: './src/favicon',
-        to: './favicon'
+        to: './favicon',
       },
       {
         from: './src/img',
-        to: './img'
+        to: './img',
       },
     ]),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
-    })
-  ]
-};
+      filename: 'style.css',
+    }),
+  ],
+}
