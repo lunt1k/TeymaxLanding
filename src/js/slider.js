@@ -13,15 +13,16 @@ var swiper = new Swiper('.swiper-container', {
     nextEl: '.swiperbutton-next',
     prevEl: '.swiperbutton-prev',
   },
-  spaceBetween: 185,
   slidesPerView: 1,
   autoHeight: true,
   loop: true,
+  spaceBetween: 20,
   breakpoints: {
     // when window width is >= 320px
     // when window width is >= 640px
     1048: {
       slidesPerView: 2,
+      spaceBetween: 185,
     }
   }
 })

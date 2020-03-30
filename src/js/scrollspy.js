@@ -57,7 +57,7 @@ const spyScrolling = () => {
 
         document
           .querySelector('.active-sidebar-nav')
-          .classList.remove('active-sidebar-nav')
+          .classList.remove('active-sidebar-nav') 
         document
           .querySelector(`a[href*=${id}`)
           .parentNode.classList.add('active-sidebar-nav')
