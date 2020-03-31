@@ -4,5 +4,4 @@ import './slider'
 import './scrollspy'
 import './toggle'
 
-
 console.log("Welcome! Greetings from app.js. var's learn Webpack2")

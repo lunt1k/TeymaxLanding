@@ -1,5 +1,6 @@
 import elements from './elements'
 import Swiper from 'swiper'
+import 'swiper/css/swiper.min.css' 
 
 var swiper = new Swiper('.swiper-container', {
   pagination: {
@@ -18,8 +19,6 @@ var swiper = new Swiper('.swiper-container', {
   loop: true,
   spaceBetween: 20,
   breakpoints: {
-    // when window width is >= 320px
-    // when window width is >= 640px
     1048: {
       slidesPerView: 2,
       spaceBetween: 185,
