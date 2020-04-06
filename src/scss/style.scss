@@ -86,7 +86,7 @@ body {
 }
 
 .navbar-collapse {
-  @include fontStyle(normal, 500, 14px, 100%);
+  @include fontStyle(normal, 600, 14px, 100%);
 }
 
 .achievement-block {
@@ -228,7 +228,7 @@ pre {
 }
 
 .navbar-top {
-  @include displayProperties(flex, auto, center, center, unset);
+  @include displayProperties(flex, auto, unset, center, unset);
 
   svg:first-child {
     padding-right: 10px;
@@ -894,6 +894,11 @@ pre {
 
   .techologies-info-block {
     flex-wrap: wrap;
+  }
+}
+.social-media__item--linkedIn{
+  svg{
+    padding-left: 1.9rem;
   }
 }
 
