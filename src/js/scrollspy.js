@@ -1,5 +1,5 @@
 const makeNavLinksSmooth = () => {
-  const navLinks = document.querySelectorAll('.nav-link')
+  const navLinks = document.querySelectorAll('.navbar-collapse__link')
 
   for (let n in navLinks) {
     if (navLinks.hasOwnProperty(n)) {
@@ -15,11 +15,18 @@ const makeNavLinksSmooth = () => {
 
 let addToggle = function() {
   const navbar = document.getElementById('navbar')
+  const paddingTopNav = parseInt(
+    window.getComputedStyle(navbar, null).getPropertyValue('padding-top')
+  )
   if (screen.width < 1480) {
     navbar.classList.add('toogle-menu')
+    if(paddingTopNav != 0){
+      navbar.style.paddingTop = '0'
+    }
   } else {
     navbar.classList.remove('toogle-menu')
   }
+  
 }
 
 window.addEventListener('resize', addToggle)
@@ -30,17 +37,16 @@ const spyScrolling = () => {
   window.onscroll = () => {
     const navbar = document.getElementById('navbar')
     const navbarToggle = document.querySelector('toogle-menu')
+    const paddingTopNav = parseInt(
+      window.getComputedStyle(navbar, null).getPropertyValue('padding-top')
+    )
     if (screen.width > 1480) {
-      if (window.pageYOffset < 250) {
-        navbar.style.paddingTop = 250 - window.pageYOffset + 'px'
-      } else if (
-        parseInt(
-          window.getComputedStyle(navbar, null).getPropertyValue('padding-top')
-        ) != 35
-      ) {
+      if (window.pageYOffset < 223) {
+        navbar.style.paddingTop = 258 - window.pageYOffset + 'px'
+      } else if (paddingTopNav != 35) {
         navbar.style.paddingTop = '35px'
       }
-    }else{
+    } else {
       navbar.style.paddingTop = '0'
     }
 
@@ -50,17 +56,17 @@ const spyScrolling = () => {
       if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
         const id = sections[s].id
         if (id === 'about_us' || id === 'technology' || id === 'customers') {
-          document.getElementById('navbar').classList.add('navbar-light')
+          document.getElementById('navbar').classList.add('navbar--light')
         } else {
-          document.getElementById('navbar').classList.remove('navbar-light')
+          document.getElementById('navbar').classList.remove('navbar--light')
         }
 
         document
-          .querySelector('.active-sidebar-nav')
-          .classList.remove('active-sidebar-nav') 
+          .querySelector('.navbar-collapse__item--active')
+          .classList.remove('navbar-collapse__item--active')
         document
           .querySelector(`a[href*=${id}`)
-          .parentNode.classList.add('active-sidebar-nav')
+          .parentNode.classList.add('navbar-collapse__item--active')
       }
   }
 }

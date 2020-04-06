@@ -3,7 +3,7 @@ const elements = {
   prevButton: document.getElementById('sliderPrevButton'),
   nextButton: document.getElementById('sliderNextButton'),
   controlButtons: document.querySelector('slider-controls-block'),
-  menuBtn: document.querySelector('.menu-btn'),
-  navbarItems: document.querySelector('.navbar-collapse')
+  menuBtn: document.querySelector('.navbar-toggle'),
 }
+
 export default elements
