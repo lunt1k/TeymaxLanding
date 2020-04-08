@@ -3,6 +3,7 @@ import elements from './elements'
 elements.menuBtn.addEventListener('click', () => {
     elements.menuBtn.classList.toggle('open')
     elements.navItemsBlock.classList.toggle('display-show')
+    // elements.navContactLinks.classList.toggle('display-show')
 })
 
 Array.from(elements.navItems).forEach(element => {

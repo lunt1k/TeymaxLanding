@@ -5,7 +5,9 @@ const elements = {
   controlButtons: document.querySelector('slider-controls-block'),
   menuBtn: document.querySelector('.navbar-toggle'),
   navItemsBlock: document.querySelector('.navbar-collapse'),
-  navItems: document.querySelectorAll('.navbar-collapse__item')
+  navItems: document.querySelectorAll('.navbar-collapse__item'),
+  navContactLinks: document.querySelector('.navbnavbar-contact-links'),
+  navAdress: document.querySelector('.navbar-tel-address')
 }
 
 export default elements

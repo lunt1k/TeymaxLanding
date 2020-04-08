@@ -3,7 +3,7 @@ const makeNavLinksSmooth = () => {
 
   for (let n in navLinks) {
     if (navLinks.hasOwnProperty(n)) {
-      navLinks[n].addEventListener('click', e => {
+      navLinks[n].addEventListener('click', (e) => {
         e.preventDefault()
         document.querySelector(navLinks[n].hash).scrollIntoView({
           behavior: 'smooth',
@@ -13,20 +13,19 @@ const makeNavLinksSmooth = () => {
   }
 }
 
-let addToggle = function() {
+let addToggle = function () {
   const navbar = document.getElementById('navbar')
   const paddingTopNav = parseInt(
     window.getComputedStyle(navbar, null).getPropertyValue('padding-top')
   )
   if (screen.width < 1480) {
     navbar.classList.add('toogle-menu')
-    if(paddingTopNav != 0){
+    if (paddingTopNav != 0) {
       navbar.style.paddingTop = '0'
     }
   } else {
     navbar.classList.remove('toogle-menu')
   }
-  
 }
 
 window.addEventListener('resize', addToggle)
@@ -46,8 +45,18 @@ const spyScrolling = () => {
       } else if (paddingTopNav != 35) {
         navbar.style.paddingTop = '35px'
       }
+    } else if (screen.width < 768) {
+      if (window.pageYOffset < 18) {
+        navbar.style.paddingTop = 18 - window.pageYOffset + 'px'
+      } else if (paddingTopNav != 0) {
+        navbar.style.paddingTop = '0'
+      }
     } else {
-      navbar.style.paddingTop = '0'
+      if (window.pageYOffset < 28) {
+        navbar.style.paddingTop = 28 - window.pageYOffset + 'px'
+      } else if (paddingTopNav != 0) {
+        navbar.style.paddingTop = '0'
+      }
     }
 
     const scrollPos =
