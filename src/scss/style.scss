@@ -933,6 +933,9 @@ pre {
 
 .display-show {
   display: flex !important;
+  // .navbar-collapse{
+  //   transform: translateY(0%);
+  // }
   transition: 0.5s;
 }
 .navbar-contact-links {
@@ -1027,6 +1030,7 @@ pre {
     .navbar-collapse {
       flex-direction: column;
       display: none;
+      // transform: translateY(-150%);
       width: 100%;
     }
     .navbar-collapse__list {
@@ -1183,6 +1187,7 @@ pre {
   }
   .meet-people-workers__item {
     flex-wrap: wrap;
+    padding-left: 0.625rem;
   }
   .meet-people__job {
     span {
