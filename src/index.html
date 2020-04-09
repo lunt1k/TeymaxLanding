@@ -38,7 +38,7 @@
       <nav id="navbar" class="navbar navbar--fixed">
         <div class="container">
           <div class="navbar-top">
-            <div class="navbar-logo navbar-collapse__item--active">
+            <div class="navbar-logo navbar-collapse__link--active">
               <svg
                 width="20"
                 height="28"
@@ -55,6 +55,7 @@
                 class="navbar-collapse__link"
                 id="teymax-link"
                 href="#first_section"
+                data-scroll
               >
                 <svg
                   width="68"
@@ -96,7 +97,11 @@
           <div class="navbar-collapse">
             <ul class="navbar-collapse__list">
               <li class="navbar-collapse__item display-none">
-                <a class="navbar-collapse__link" href="#first_section"></a>
+                <a
+                  class="navbar-collapse__link"
+                  href="#first_section"
+                  data-scroll
+                ></a>
               </li>
               <li class="navbar-collapse__item">
                 <svg
@@ -112,7 +117,9 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link" href="#about_us">About us</a>
+                <a class="navbar-collapse__link" href="#about_us" data-scroll
+                  >About us</a
+                >
               </li>
               <li class="navbar-collapse__item">
                 <svg
@@ -128,7 +135,7 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link" href="#technology"
+                <a class="navbar-collapse__link" href="#technology" data-scroll
                   >Technologies</a
                 >
               </li>
@@ -146,7 +153,9 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link" href="#our_team">Our team</a>
+                <a class="navbar-collapse__link" href="#our_team" data-scroll
+                  >Our team</a
+                >
               </li>
               <li class="navbar-collapse__item">
                 <svg
@@ -162,7 +171,9 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link" href="#customers">Customers</a>
+                <a class="navbar-collapse__link navbar-collapse__link--active" href="#customers" data-scroll
+                  >Customers</a
+                >
               </li>
               <li class="navbar-collapse__item">
                 <svg
@@ -178,7 +189,7 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link" href="#contact_us"
+                <a class="navbar-collapse__link" href="#contact_us" data-scroll
                   >Contact us</a
                 >
               </li>
@@ -186,7 +197,8 @@
             <div class="navbar-contact">
               <div class="navbar-contact-links">
                 <div class="navbar-contact__item">
-                  <a href="#"><span>Skype</span>
+                  <a href="#"
+                    ><span>Skype</span>
                     <svg
                       width="15"
                       height="13"
@@ -198,12 +210,12 @@
                         d="M1 12L13 1M13 1H3M13 1L12.5 11"
                         stroke="#F1F1F1"
                         stroke-width="2"
-                      />
-                    </svg></a>
-                  
+                      /></svg
+                  ></a>
                 </div>
                 <div class="navbar-contact__item">
-                  <a href="#"><span>Upwork</span>
+                  <a href="#"
+                    ><span>Upwork</span>
                     <svg
                       width="15"
                       height="13"
@@ -215,14 +227,14 @@
                         d="M1 12L13 1M13 1H3M13 1L12.5 11"
                         stroke="#F1F1F1"
                         stroke-width="2"
-                      />
-                    </svg></a>
-                  
+                      /></svg
+                  ></a>
                 </div>
               </div>
               <div class="navbar-social-links">
                 <div class="navbar-social__item">
-                  <a href="#"><span>Instagram</span>
+                  <a href="#"
+                    ><span>Instagram</span>
                     <svg
                       width="15"
                       height="13"
@@ -234,12 +246,12 @@
                         d="M1 12L13 1M13 1H3M13 1L12.5 11"
                         stroke="#F1F1F1"
                         stroke-width="2"
-                      />
-                    </svg></a>
-                  
+                      /></svg
+                  ></a>
                 </div>
                 <div class="navbar-social__item">
-                  <a href="#"><span>Facebook</span>
+                  <a href="#"
+                    ><span>Facebook</span>
                     <svg
                       width="15"
                       height="13"
@@ -251,12 +263,12 @@
                         d="M1 12L13 1M13 1H3M13 1L12.5 11"
                         stroke="#F1F1F1"
                         stroke-width="2"
-                      />
-                    </svg></a>
-                  
+                      /></svg
+                  ></a>
                 </div>
                 <div class="navbar-social__item navbar-social__item--linkedIn">
-                  <a href="#"><span>LinkedIn</span>
+                  <a href="#"
+                    ><span>LinkedIn</span>
                     <svg
                       width="15"
                       height="13"
@@ -268,9 +280,8 @@
                         d="M1 12L13 1M13 1H3M13 1L12.5 11"
                         stroke="#F1F1F1"
                         stroke-width="2"
-                      />
-                    </svg></a>
-                  
+                      /></svg
+                  ></a>
                 </div>
               </div>
             </div>
@@ -1415,83 +1426,83 @@
           </div>
         </div>
       </div>
-    </section>
-    <footer class="footer">
-      <div class="container container--footer-grid">
-        <div class="social-media">
-          <div class="social-media__item">
-            <a href="#"
-              >Instagram
-              <svg
-                width="15"
-                height="13"
-                viewBox="0 0 15 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 12L13 1M13 1H3M13 1L12.5 11"
-                  stroke="#F1F1F1"
-                  stroke-width="2"
-                /></svg
-            ></a>
+      <footer class="footer">
+        <div class="container container--footer-grid">
+          <div class="social-media">
+            <div class="social-media__item">
+              <a href="#"
+                >Instagram
+                <svg
+                  width="15"
+                  height="13"
+                  viewBox="0 0 15 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                    stroke="#F1F1F1"
+                    stroke-width="2"
+                  /></svg
+              ></a>
+            </div>
+            <div class="social-media__item">
+              <a href="#"
+                >Facebook
+                <svg
+                  width="15"
+                  height="13"
+                  viewBox="0 0 15 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                    stroke="#F1F1F1"
+                    stroke-width="2"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="social-media__item social-media__item--linkedIn">
+              <a href="#"
+                >LinkedIn
+                <svg
+                  width="15"
+                  height="13"
+                  viewBox="0 0 15 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                    stroke="#F1F1F1"
+                    stroke-width="2"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
-          <div class="social-media__item">
-            <a href="#"
-              >Facebook
-              <svg
-                width="15"
-                height="13"
-                viewBox="0 0 15 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 12L13 1M13 1H3M13 1L12.5 11"
-                  stroke="#F1F1F1"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
+          <div class="footer-nav">
+            <div class="footer-nav__links">
+              <div class="footer-nav__item"><a href="#about_us" data-scroll>About us</a></div>
+              <div class="footer-nav__item"><a href="#technology" data-scroll>Technologies</a></div>
+              <div class="footer-nav__item"><a href="#our_team" data-scroll>Our team</a></div>
+              <div class="footer-nav__item"><a href="#customers" data-scroll>Customer</a></div>
+              <div class="footer-nav__item"><a href="#contact_us" data-scroll>Contact us</a></div>
+            </div>
           </div>
-          <div class="social-media__item social-media__item--linkedIn">
-            <a href="#"
-              >LinkedIn
-              <svg
-                width="15"
-                height="13"
-                viewBox="0 0 15 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 12L13 1M13 1H3M13 1L12.5 11"
-                  stroke="#F1F1F1"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-nav">
-          <div class="footer-nav__links">
-            <div class="footer-nav__item"><a href="#">About us</a></div>
-            <div class="footer-nav__item"><a href="#">Technologies</a></div>
-            <div class="footer-nav__item"><a href="#">Our team</a></div>
-            <div class="footer-nav__item"><a href="#">Customer</a></div>
-            <div class="footer-nav__item"><a href="#">Contact us</a></div>
-          </div>
-        </div>
 
-        <div class="footer-address">
-          <div class="footer__tel-number">
-            <p>+38 (096) 750 24 35</p>
-          </div>
-          <div class="footer__address-company">
-            <p>7 Stepana Bandery Street, Zhytomyr</p>
+          <div class="footer-address">
+            <div class="footer__tel-number">
+              <p>+38 (096) 750 24 35</p>
+            </div>
+            <div class="footer__address-company">
+              <p>7 Stepana Bandery Street, Zhytomyr</p>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
   </body>
 </html>
