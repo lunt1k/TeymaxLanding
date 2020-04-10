@@ -6,7 +6,7 @@ elements.menuBtn.addEventListener('click', () => {
     // elements.navContactLinks.classList.toggle('display-show')
 })
 
-Array.from(elements.navItems).forEach(element => {
+Array.from(elements.navLinks).forEach(element => {
     element.addEventListener('click', () => {
         elements.menuBtn.classList.remove('open')
         elements.navItemsBlock.classList.remove('display-show')

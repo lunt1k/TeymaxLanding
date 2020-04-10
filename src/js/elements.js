@@ -10,8 +10,10 @@ const elements = {
   navContactLinks: document.querySelector('.navbnavbar-contact-links'),
   navAdress: document.querySelector('.navbar-tel-address'),
   navLinks: document.querySelectorAll('.navbar-collapse__link'),
+  // navLinkContactSection: document.getElementById('contact_link'),
   sections: document.querySelectorAll('section'),
-  contactUsSection: document.getElementById('contact_us')
+  contactUsSection: document.getElementById('contact_us'),
+  firstBlockPosition: document.getElementById('first_section')
 }
 
 export default elements

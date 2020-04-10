@@ -1,10 +1,8 @@
-@mixin displayProperties(
-  $display,
+@mixin displayProperties($display,
   $width,
   $justify_content,
   $align_items,
-  $flex_flow
-) {
+  $flex_flow) {
   display: $display;
   width: $width;
   justify-content: $justify_content;
@@ -57,7 +55,7 @@ body {
   @include displayProperties(flex, 100%, center, unset, unset);
   background-color: #181a21;
 
-  & > .container {
+  &>.container {
     @include displayProperties(inherit, inherit, space-between, inherit, wrap);
   }
 }
@@ -70,6 +68,7 @@ body {
 .second-block {
   @include displayProperties(flex, 100%, unset, center, column);
   padding-top: 9.375rem;
+  background-color: #fff;
 
   & .container {
     align-items: initial;
@@ -162,7 +161,7 @@ pre {
 
   span:nth-child(1) {
     @include fontPodkova(unset, unset, 119px, 100%);
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum'on, 'lnum'on;
   }
 }
 
@@ -225,6 +224,7 @@ pre {
   z-index: 15;
   padding-top: 16.125rem;
   transition: padding 0.1s;
+  mix-blend-mode: difference;
 
   .navbar-toggle {
     display: none;
@@ -341,7 +341,7 @@ pre {
   width: 100%;
   padding-top: 9.375rem;
 
-  & > .title {
+  &>.title {
     margin-bottom: 25px;
   }
 }
@@ -408,6 +408,7 @@ pre {
   @include displayProperties(flex, 100%, unset, center, column);
   background-color: #181a21;
   color: #f1f1f1;
+  overflow: hidden;
 }
 
 .meet-people {
@@ -416,7 +417,7 @@ pre {
   max-width: 1250px;
   padding-left: 23.125rem;
 
-  & > .title {
+  &>.title {
     border-bottom: 1px solid rgba(241, 241, 241, 0.3);
     margin: 0;
   }
@@ -431,9 +432,30 @@ pre {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
+  animation: animate 6s linear infinite;
 
   p {
     margin: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes animate-table {
+  0% {
+    transform: translate(-150%, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
   }
 }
 
@@ -445,7 +467,7 @@ pre {
   display: flex;
   border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 
-  & > .meet-people-name {
+  &>.meet-people-name {
     @include displayProperties(flex, 100%, center, unset, column);
     max-width: 440px;
     padding-left: 40px;
@@ -572,7 +594,7 @@ pre {
     color: black;
   }
 
-  & > .container {
+  &>.container {
     flex: 5 1 1200px;
   }
 }
@@ -871,7 +893,7 @@ pre {
 }
 
 .swiper-container-horizontal {
-  & > .swiper-pagination-bullets {
+  &>.swiper-pagination-bullets {
     .swiper-pagination-bullet {
       margin: 0 !important;
     }
@@ -994,7 +1016,7 @@ pre {
   }
 
   .separate-info-block-left {
-    & > .achievement__description {
+    &>.achievement__description {
       flex-direction: row;
     }
   }
@@ -1027,7 +1049,7 @@ pre {
   }
 
   .customers-logo {
-    & > div {
+    &>div {
       width: 100%;
       padding: 1rem 0;
       margin: 0;
@@ -1301,7 +1323,7 @@ pre {
   }
 
   .fifth-block {
-    & > .container {
+    &>.container {
       padding-bottom: 4.875rem;
     }
   }
@@ -1344,7 +1366,7 @@ pre {
   }
 
   .fourth-block {
-    & > .container-right-side {
+    &>.container-right-side {
       padding: 3.75rem 3.125rem 0 3.125rem;
     }
   }
@@ -1442,7 +1464,7 @@ pre {
   }
 
   .fifth-block {
-    & > .container {
+    &>.container {
       padding-bottom: 9.375rem;
     }
   }
@@ -1471,7 +1493,7 @@ pre {
   }
 
   .meet-people-specialization--fullstack {
-    & > .meet-people-name {
+    &>.meet-people-name {
       padding-left: 0;
       max-width: 250px;
     }
@@ -1520,7 +1542,7 @@ pre {
   }
 
   .fifth-block {
-    & > .container {
+    &>.container {
       flex-wrap: wrap;
     }
   }
@@ -1544,7 +1566,7 @@ pre {
   //     flex-direction: row;
   //   }
   .footer {
-    & > .container {
+    &>.container {
       grid-template-columns: 50% 50%;
       grid-template-areas:
         'footer-nav social-media'
@@ -1668,6 +1690,11 @@ pre {
 
   .meet-people__header {
     padding-bottom: 7.813rem;
+    animation: none;
+
+    p {
+      animation: animate-table 6s linear infinite;
+    }
   }
 
   .meet-people-specialization--fullstack {
@@ -1879,7 +1906,7 @@ pre {
 
 @media only screen and (max-width: 1224px) {
   .fourth-block {
-    & > .container {
+    &>.container {
       padding: 0;
     }
   }
@@ -1925,6 +1952,7 @@ pre {
     .container {
       justify-content: space-between;
     }
+    mix-blend-mode: normal;
   }
 
   .customers {
@@ -1961,7 +1989,7 @@ pre {
   }
 
   .second-block {
-    & > .container {
+    &>.container {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -2027,9 +2055,11 @@ pre {
   .navbar--light {
     background-color: white;
   }
+
   .footer {
     padding-bottom: 0rem;
   }
+
   .fifth-block {
     .container {
       margin-bottom: 0;
@@ -2066,7 +2096,7 @@ pre {
 
 @media only screen and (min-width: 1481px) and (max-width: 1620px) {
   .first-block {
-    & > .container {
+    &>.container {
       flex-wrap: nowrap;
     }
   }
@@ -2180,6 +2210,7 @@ pre {
 }
 
 @media only screen and (min-width: 1920px) {
+
   .ready-discuss__ready,
   .ready-discuss__discuss {
     font-size: 6.198vw;
