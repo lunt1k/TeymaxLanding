@@ -30,6 +30,37 @@
       sizes="16x16"
       href="favicon/favicon-16x16.png"
     />
+    <style>
+      .first-block {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #181a21;
+      }
+      .first-block > .container {
+        justify-content: flex-end;
+        flex-flow: wrap;
+      }
+      .center-section {
+        flex: 1 1 1250px;
+        max-width: 1250px;
+      }
+      body {
+        font-family: 'Neue Haas Grotesk Display Pro';
+        background-color: #181a21;
+      }
+      .company-qualification h1 {
+        font-weight: bold;
+        font-size: 119px;
+        line-height: 100%;
+        color: white;
+        max-width: 1318px;
+        padding-top: 16.875rem;
+        margin: 0;
+      }
+      
+    </style>
     <title>Teymax</title>
   </head>
 
@@ -97,11 +128,7 @@
           <div class="navbar-collapse">
             <ul class="navbar-collapse__list">
               <li class="navbar-collapse__item display-none">
-                <a
-                  class=""
-                  href="#first_section"
-                  data-scroll
-                ></a>
+                <a class="" href="#first_section" data-scroll></a>
               </li>
               <li class="navbar-collapse__item">
                 <svg
@@ -171,7 +198,10 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link navbar-collapse__link--active" href="#customers" data-scroll
+                <a
+                  class="navbar-collapse__link navbar-collapse__link--active"
+                  href="#customers"
+                  data-scroll
                   >Customers</a
                 >
               </li>
@@ -189,7 +219,11 @@
                     fill="#F1F1F1"
                   />
                 </svg>
-                <a class="navbar-collapse__link" id="contact_link" href="#contact_us" data-scroll
+                <a
+                  class="navbar-collapse__link"
+                  id="contact_link"
+                  href="#contact_us"
+                  data-scroll
                   >Contact us</a
                 >
               </li>
@@ -578,7 +612,7 @@
       <div class="container container--right">
         <div class="meet-people">
           <div class="meet-people__header">
-            <p>Meet our people</p> 
+            <p>Meet our people</p>
           </div>
           <div class="title">
             <div class="title__text">
@@ -1485,11 +1519,21 @@
           </div>
           <div class="footer-nav">
             <div class="footer-nav__links">
-              <div class="footer-nav__item"><a href="#about_us" data-scroll>About us</a></div>
-              <div class="footer-nav__item"><a href="#technology" data-scroll>Technologies</a></div>
-              <div class="footer-nav__item"><a href="#our_team" data-scroll>Our team</a></div>
-              <div class="footer-nav__item"><a href="#customers" data-scroll>Customer</a></div>
-              <div class="footer-nav__item"><a href="#contact_us" data-scroll>Contact us</a></div>
+              <div class="footer-nav__item">
+                <a href="#about_us" data-scroll>About us</a>
+              </div>
+              <div class="footer-nav__item">
+                <a href="#technology" data-scroll>Technologies</a>
+              </div>
+              <div class="footer-nav__item">
+                <a href="#our_team" data-scroll>Our team</a>
+              </div>
+              <div class="footer-nav__item">
+                <a href="#customers" data-scroll>Customer</a>
+              </div>
+              <div class="footer-nav__item">
+                <a href="#contact_us" data-scroll>Contact us</a>
+              </div>
             </div>
           </div>
 

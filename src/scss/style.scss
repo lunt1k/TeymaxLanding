@@ -34,33 +34,23 @@
     weight: $weight;
     size: $size;
   }
-
   line-height: $line_height;
 }
 
 body {
   margin: 0;
-  font-family: 'Neue Haas Grotesk Display Pro';
+  
 }
 
-.company-qualification {
-  h1 {
-    @include fontStyle(normal, bold, 119px, 100%);
-    color: white;
-    max-width: 1318px;
-    padding-top: 16.875rem;
-    margin: 0;
-  }
-}
-
-.first-block {
-  @include displayProperties(flex, 100%, center, unset, unset);
-  background-color: #181a21;
-
-  & > .container {
-    @include displayProperties(inherit, inherit, space-between, inherit, wrap);
-  }
-}
+// .company-qualification {
+//   h1 {
+//     @include fontStyle(normal, bold, 119px, 100%);
+//     color: white;
+//     max-width: 1318px;
+//     padding-top: 16.875rem;
+//     margin: 0;
+//   }
+// }
 
 .container {
   @include displayProperties(flex, 100%, space-between, stretch, unset);
@@ -74,14 +64,15 @@ body {
 
   & .container {
     align-items: initial;
+    justify-content: flex-end;
   }
 }
 
-.center-section {
-  flex: 1 1 1250px;
-  max-width: 1250px;
-  margin-left: auto;
-}
+// .center-section {
+//   flex: 1 1 1250px;
+//   max-width: 1250px;
+//   margin-left: auto;
+// }
 
 .navbar-collapse {
   @include fontStyle(normal, 600, 14px, 100%);
@@ -442,11 +433,11 @@ pre {
 
 @keyframes animate {
   0% {
-    transform: translate(-100%, 0);
+    transform: translate(-120%, 0);
   }
 
   100% {
-    transform: translate(100%, 0);
+    transform: translate(120%, 0);
   }
 }
 
@@ -1961,6 +1952,9 @@ pre {
   .footer {
     padding: 0;
     box-sizing: border-box;
+  }
+  .navbar{
+    left: 2rem;
   }
 }
 
