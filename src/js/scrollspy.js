@@ -6,7 +6,7 @@ let addToggle = function () {
   const paddingTopNav = parseInt(
     window.getComputedStyle(navbar, null).getPropertyValue('padding-top')
   );
-  console.log(window.innerWidth)
+  console.log(window.innerWidth);
   if (window.innerWidth < 1480) {
     navbar.classList.add('toogle-menu');
     if (navbar.style.paddingTop != 0) {
@@ -14,7 +14,7 @@ let addToggle = function () {
     }
   } else {
     navbar.classList.remove('toogle-menu');
-    navbar.style.paddingTop = '250px';
+    navbar.style.paddingTop = '258px';
   }
 };
 
@@ -25,6 +25,10 @@ window.addEventListener('resize', () => {
   addToggle();
   contactUsTopPosition =
     elements.contactUsSection.getBoundingClientRect().top + window.pageYOffset;
+});
+
+window.addEventListener('load', () => {
+  addToggle();
 });
 
 window.onscroll = () => {

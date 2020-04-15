@@ -1098,11 +1098,6 @@ pre {
     }
   }
 
-  .meet-people__header {
-    p {
-      animation: animate-mobile 6s linear infinite;
-    }
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1140,7 +1135,12 @@ pre {
       flex-wrap: wrap;
     }
   }
-
+  
+  .meet-people__header {
+    p {
+      animation: animate-mobile 6s linear infinite;
+    }
+  }
   .navbar-contact {
     display: flex;
     justify-content: space-between;
