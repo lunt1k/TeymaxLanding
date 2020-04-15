@@ -13,7 +13,8 @@ const elements = {
   // navLinkContactSection: document.getElementById('contact_link'),
   sections: document.querySelectorAll('section'),
   contactUsSection: document.getElementById('contact_us'),
-  firstBlockPosition: document.getElementById('first_section')
+  firstBlockPosition: document.getElementById('first_section'),
+  body: document.querySelector('body')
 }
 
 export default elements
