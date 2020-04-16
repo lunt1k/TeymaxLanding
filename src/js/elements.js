@@ -14,7 +14,8 @@ const elements = {
   sections: document.querySelectorAll('section'),
   contactUsSection: document.getElementById('contact_us'),
   firstBlockPosition: document.getElementById('first_section'),
-  body: document.querySelector('body')
+  body: document.querySelector('body'),
+  videoBlock: document.querySelectorAll('.video-iframe')
 }
 
 export default elements

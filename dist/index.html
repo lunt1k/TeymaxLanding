@@ -50,6 +50,36 @@
         font-family: 'Neue Haas Grotesk Display Pro';
         background-color: #181a21;
       }
+      .navbar-collapse__link {
+        padding-left: 15px;
+        text-decoration: none;
+        color: #8c8d90;
+      }
+      .navbar-collapse__list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .navbar {
+        z-index: 15;
+        padding-top: 16.125rem;
+        transition: padding 0.1s;
+        mix-blend-mode: difference;
+      }
+      .navbar-contact a{
+        text-decoration: none;
+      }
+      .navbar-tel-address a{
+        text-decoration: none;
+      }
+
+      .navbar-contact {
+        display: none;
+      }
+      .navbar-collapse__item {
+        display: flex;
+        vertical-align: middle;
+        padding: 15px 0;
+      }
       .company-qualification h1 {
         font-weight: bold;
         font-size: 119px;
@@ -58,6 +88,11 @@
         max-width: 1318px;
         padding-top: 16.875rem;
         margin: 0;
+      }
+      @media only screen and (min-width: 1480px) {
+        .navbar .container{
+          flex-direction: column;
+        }
       }
       
     </style>
@@ -1043,14 +1078,14 @@
               <div class="slider-item-block">
                 <div class="info-customer">
                   <div class="info-customer__name">
-                    <p>Kevin Fricke</p>
+                    <p>AcademG</p>
                   </div>
                   <div class="info-customer__company">
                     <p>Lone Star Media</p>
                   </div>
                 </div>
                 <div class="img-customer">
-                  <img src="img/CustomerImg.png" alt="Cutomer" />
+                  <iframe class="video-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -1058,14 +1093,14 @@
               <div class="slider-item-block">
                 <div class="info-customer">
                   <div class="info-customer__name">
-                    <p>Kevin Fricke</p>
+                    <p>Anton</p>
                   </div>
                   <div class="info-customer__company">
                     <p>Lone Star Media</p>
                   </div>
                 </div>
                 <div class="img-customer">
-                  <img src="img/CustomerImg.png" alt="Cutomer" />
+                  <iframe class="video-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>

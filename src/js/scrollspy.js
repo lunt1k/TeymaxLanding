@@ -1,18 +1,26 @@
 import SmoothScroll from 'smooth-scroll';
 import elements from './elements';
 
+const videosURL = [
+  'https://www.youtube.com/embed/T3zaF1BmFT0',
+  'https://www.youtube.com/embed/ea5uxRmRe8Y',
+];
+
 let addToggle = function () {
   const navbar = document.getElementById('navbar');
   const paddingTopNav = parseInt(
     window.getComputedStyle(navbar, null).getPropertyValue('padding-top')
   );
-  console.log(window.innerWidth);
-  if (window.innerWidth < 1480) {
+  const winWidth = window.innerWidth;
+
+  if (winWidth < 1480) {
+    console.log('harosh');
     navbar.classList.add('toogle-menu');
     if (navbar.style.paddingTop != 0) {
       navbar.style.paddingTop = '0';
     }
   } else {
+    console.log('loh');
     navbar.classList.remove('toogle-menu');
     navbar.style.paddingTop = '258px';
   }
@@ -29,6 +37,11 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('load', () => {
   addToggle();
+  setTimeout(() => {
+    [...elements.videoBlock].forEach((el, index) => {
+      el.src = `${videosURL[index]}`;
+    });
+  }, 1000);
 });
 
 window.onscroll = () => {
@@ -58,7 +71,7 @@ window.onscroll = () => {
     }
   }
 
-  if (window.pageYOffset + 250 >= contactUsTopPosition) {
+  if (window.pageYOffset + 300 >= contactUsTopPosition) {
     elements.navbar.classList.add('display-hide');
   } else {
     elements.navbar.classList.remove('display-hide');
@@ -68,7 +81,9 @@ window.onscroll = () => {
 new SmoothScroll('[data-scroll]', {
   speed: 1000,
   speedAsDuration: true,
+  header: '[data-scroll-header]',
 });
+
 const sections = [...elements.sections];
 
 const sectionsTop = Array.prototype.map.call(sections, (section) => {
@@ -81,7 +96,8 @@ window.addEventListener('scroll', () => {
     document.documentElement.scrollTop || document.body.scrollTop;
 
   sectionsTop.forEach(({ id, offsetTop }) => {
-    if (offsetTop <= currScrollPosition) {
+    let positionTop = offsetTop - window.innerHeight / 2;
+    if (positionTop <= currScrollPosition) {
       document
         .querySelector(`.${ACTIVE_CLASSNAME}`)
         .classList.remove(ACTIVE_CLASSNAME);

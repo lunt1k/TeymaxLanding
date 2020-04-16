@@ -1,8 +1,10 @@
-@mixin displayProperties($display,
+@mixin displayProperties(
+  $display,
   $width,
   $justify_content,
   $align_items,
-  $flex_flow) {
+  $flex_flow
+) {
   display: $display;
   width: $width;
   justify-content: $justify_content;
@@ -38,7 +40,6 @@
 
 body {
   margin: 0;
-
 }
 
 // .company-qualification {
@@ -123,7 +124,7 @@ pre {
   }
 }
 
-.fixed-body{
+.fixed-body {
   position: fixed;
 }
 
@@ -157,7 +158,7 @@ pre {
 
   span:nth-child(1) {
     @include fontPodkova(unset, unset, 119px, 100%);
-    font-feature-settings: 'pnum'on, 'lnum'on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
   }
 }
 
@@ -193,11 +194,11 @@ pre {
   @include displayProperties(flex, 100%, unset, center, column);
 }
 
-.navbar-collapse__link {
-  padding-left: 15px;
-  text-decoration: none;
-  color: #8c8d90;
-}
+// .navbar-collapse__link {
+//   padding-left: 15px;
+//   text-decoration: none;
+//   color: #8c8d90;
+// }
 
 .navbar-collapse__link--active {
   a {
@@ -210,16 +211,16 @@ pre {
   }
 }
 
-.navbar-collapse__list {
-  list-style-type: none;
-  padding-left: 0;
-}
+// .navbar-collapse__list {
+//   list-style-type: none;
+//   padding-left: 0;
+// }
 
 .navbar {
-  z-index: 15;
-  padding-top: 16.125rem;
-  transition: padding 0.1s;
-  mix-blend-mode: difference;
+  // z-index: 15;
+  // padding-top: 16.125rem;
+  // transition: padding 0.1s;
+  // mix-blend-mode: difference;
 
   .navbar-toggle {
     display: none;
@@ -232,11 +233,11 @@ pre {
   }
 }
 
-.navbar-collapse__item {
-  display: flex;
-  vertical-align: middle;
-  padding: 15px 0;
-}
+// .navbar-collapse__item {
+//   display: flex;
+//   vertical-align: middle;
+//   padding: 15px 0;
+// }
 
 .navbar-top {
   @include displayProperties(flex, auto, unset, center, unset);
@@ -313,7 +314,7 @@ pre {
 
 .performance-category {
   @include displayProperties(flex, 100%, unset, unset, column);
-  padding: 9.375rem 0 4.688rem 23.125rem;
+  padding: 9.375rem 0 14.063rem 23.125rem;
   max-width: 1250px;
   flex: 3 1 1200px;
 }
@@ -340,9 +341,8 @@ pre {
 .technologies {
   max-width: 1250px;
   width: 100%;
-  padding-top: 9.375rem;
 
-  &>.title {
+  & > .title {
     margin-bottom: 25px;
   }
 }
@@ -418,7 +418,7 @@ pre {
   max-width: 1250px;
   padding-left: 23.125rem;
 
-  &>.title {
+  & > .title {
     border-bottom: 1px solid rgba(241, 241, 241, 0.3);
     margin: 0;
   }
@@ -433,20 +433,20 @@ pre {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
-  animation: animate 6s linear infinite;
 
   p {
+    animation: animate 6s linear infinite;
     margin: 0;
   }
 }
 
 @keyframes animate {
   0% {
-    transform: translate(120%, 0);
+    transform: translate(100%, 0);
   }
 
   100% {
-    transform: translate(-120%, 0);
+    transform: translate(-100%, 0);
   }
 }
 
@@ -478,11 +478,15 @@ pre {
   display: flex;
   border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 
-  &>.meet-people-name {
-    @include displayProperties(flex, 100%, center, unset, column);
+  & > .meet-people-name {
+    @include displayProperties(flex, 100%, unset, unset, column);
     max-width: 440px;
     padding-left: 40px;
     box-sizing: border-box;
+
+    & > .meet-people-name__item:first-child{
+      padding-top: 6.563rem;
+    }
   }
 }
 
@@ -499,6 +503,7 @@ pre {
 }
 
 .meet-people-name__item {
+  @include displayProperties(flex, auto, flex-start, center, unset);
   height: 70px;
 }
 
@@ -605,7 +610,7 @@ pre {
     color: black;
   }
 
-  &>.container {
+  & > .container {
     flex: 5 1 1200px;
   }
 }
@@ -825,10 +830,10 @@ pre {
 
 .img-customer {
   display: flex;
+  width: 100%;
 
-  img {
+  iframe {
     width: 100%;
-    height: 100%;
   }
 }
 
@@ -845,6 +850,14 @@ pre {
 .name-customer {
   @include fontStyle(normal, 400, 46px, 55px);
   color: #181a21;
+}
+
+.navbar-contact-links {
+  display: none;
+}
+
+.navbar-tel-address {
+  display: none;
 }
 
 .customers-company {
@@ -904,7 +917,7 @@ pre {
 }
 
 .swiper-container-horizontal {
-  &>.swiper-pagination-bullets {
+  & > .swiper-pagination-bullets {
     .swiper-pagination-bullet {
       margin: 0 !important;
     }
@@ -987,23 +1000,12 @@ pre {
   // }
 }
 
-.navbar-contact-links {
-  display: none;
-}
-
-.navbar-tel-address {
-  display: none;
-}
-
-.navbar-contact {
-  display: none;
-}
-
 @media only screen and (max-width: 374px) {
   .navbar-collapse__list {
     margin-bottom: 2.5rem;
   }
-  .navbar-contact{
+
+  .navbar-contact {
     margin-bottom: 2.5rem;
   }
 
@@ -1016,7 +1018,7 @@ pre {
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 767px){
+@media only screen and (min-width: 375px) and (max-width: 767px) {
   .technologies-name {
     font-size: 5rem;
   }
@@ -1025,7 +1027,7 @@ pre {
     margin-bottom: 7.188rem;
   }
 
-  .navbar-contact{
+  .navbar-contact {
     margin-bottom: 3.125rem;
   }
 }
@@ -1043,9 +1045,6 @@ pre {
 }
 
 @media only screen and (max-width: 640px) {
-  .slider-item-block {
-    flex-wrap: wrap;
-  }
 
   .slide-wrapper {
     overflow: hidden;
@@ -1058,7 +1057,7 @@ pre {
   }
 
   .separate-info-block-left {
-    &>.achievement__description {
+    & > .achievement__description {
       flex-direction: row;
     }
   }
@@ -1091,13 +1090,12 @@ pre {
   }
 
   .customers-logo {
-    &>div {
+    & > div {
       width: 100%;
       padding: 1rem 0;
       margin: 0;
     }
   }
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -1135,12 +1133,13 @@ pre {
       flex-wrap: wrap;
     }
   }
-  
+
   .meet-people__header {
     p {
       animation: animate-mobile 6s linear infinite;
     }
   }
+
   .navbar-contact {
     display: flex;
     justify-content: space-between;
@@ -1148,10 +1147,6 @@ pre {
     span {
       @include fontStyle(normal, 600, 16px, 19px);
       color: #f1f1f1;
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 
@@ -1162,8 +1157,6 @@ pre {
       padding-right: 0.938rem;
     }
   }
-
-  
 
   .navbar-social__item {
     span {
@@ -1200,10 +1193,6 @@ pre {
     span {
       @include fontStyle(normal, 600, 0.875rem, 100%);
       color: #f1f1f1;
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 
@@ -1267,8 +1256,6 @@ pre {
   .achievement__item--right {
     flex-direction: row;
   }
-
-  
 
   .technologies-info--database-bottom {
     margin-bottom: 1.375rem;
@@ -1366,7 +1353,7 @@ pre {
   }
 
   .fifth-block {
-    &>.container {
+    & > .container {
       padding-bottom: 4.875rem;
     }
   }
@@ -1409,7 +1396,7 @@ pre {
   }
 
   .fourth-block {
-    &>.container-right-side {
+    & > .container-right-side {
       padding: 3.75rem 3.125rem 0 3.125rem;
     }
   }
@@ -1513,7 +1500,7 @@ pre {
   }
 
   .fifth-block {
-    &>.container {
+    & > .container {
       padding-bottom: 9.375rem;
     }
   }
@@ -1542,7 +1529,7 @@ pre {
   }
 
   .meet-people-specialization--fullstack {
-    &>.meet-people-name {
+    & > .meet-people-name {
       padding-left: 0;
       max-width: 250px;
     }
@@ -1591,7 +1578,7 @@ pre {
   }
 
   .fifth-block {
-    &>.container {
+    & > .container {
       flex-wrap: wrap;
     }
   }
@@ -1615,7 +1602,7 @@ pre {
   //     flex-direction: row;
   //   }
   .footer {
-    &>.container {
+    & > .container {
       grid-template-columns: 50% 50%;
       grid-template-areas:
         'footer-nav social-media'
@@ -1893,7 +1880,7 @@ pre {
   }
 
   .performance-category {
-    padding: 15% 2rem 0 0;
+    padding: 9.375rem 2rem 4.688rem 0;
     margin-left: auto;
   }
 
@@ -1959,11 +1946,13 @@ pre {
 
 @media only screen and (max-width: 1224px) {
   .fourth-block {
-    &>.container {
+    & > .container {
       padding: 0;
     }
   }
-
+  .slider-item-block {
+    flex-wrap: wrap;
+  }
   // .footer {
   //   padding-bottom: 5.875rem;
 
@@ -2047,7 +2036,7 @@ pre {
   }
 
   .second-block {
-    &>.container {
+    & > .container {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -2100,7 +2089,7 @@ pre {
     left: 0;
     top: -1px;
     background-color: #181a21;
-
+    padding-top: 0;
     // li {
     //   display: inline-flex;
     //   padding-right: 1rem;
@@ -2144,17 +2133,9 @@ pre {
   // }
 }
 
-@media only screen and (min-width: 1480px) {
-  .navbar {
-    .container {
-      flex-direction: column;
-    }
-  }
-}
-
 @media only screen and (min-width: 1481px) and (max-width: 1620px) {
   .first-block {
-    &>.container {
+    & > .container {
       flex-wrap: nowrap;
     }
   }
@@ -2268,7 +2249,6 @@ pre {
 }
 
 @media only screen and (min-width: 1920px) {
-
   .ready-discuss__ready,
   .ready-discuss__discuss {
     font-size: 6.198vw;

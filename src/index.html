@@ -50,6 +50,36 @@
         font-family: 'Neue Haas Grotesk Display Pro';
         background-color: #181a21;
       }
+      .navbar-collapse__link {
+        padding-left: 15px;
+        text-decoration: none;
+        color: #8c8d90;
+      }
+      .navbar-collapse__list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .navbar {
+        z-index: 15;
+        padding-top: 16.125rem;
+        transition: padding 0.1s;
+        mix-blend-mode: difference;
+      }
+      .navbar-contact a{
+        text-decoration: none;
+      }
+      .navbar-tel-address a{
+        text-decoration: none;
+      }
+
+      .navbar-contact {
+        display: none;
+      }
+      .navbar-collapse__item {
+        display: flex;
+        vertical-align: middle;
+        padding: 15px 0;
+      }
       .company-qualification h1 {
         font-weight: bold;
         font-size: 119px;
@@ -58,6 +88,11 @@
         max-width: 1318px;
         padding-top: 16.875rem;
         margin: 0;
+      }
+      @media only screen and (min-width: 1480px) {
+        .navbar .container{
+          flex-direction: column;
+        }
       }
       
     </style>
@@ -751,22 +786,13 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div
-            class="meet-people-specialization meet-people-specialization--frontend"
-          >
-            <div class="meet-people-name">
-              <div class="meet-people-name__item">
-                <p>Frontend</p>
-              </div>
-            </div>
-            <div class="meet-people-workers">
-              <div class="meet-people-workers__item people-item">
-                <div class="meet-people__job"></div>
+              <div class="meet-people-workers__item">
+                <div class="meet-people__job">
+                  <span>QA</span>
+                </div>
                 <div class="meet-people-employee">
                   <div class="meet-people-employee__name">
-                    Alexey Sobolev
+                    Anastasiia Yakovlieva
                   </div>
                   <div class="meet-people-employee__linkedIn-profile">
                     <a href="#">LinkedIn</a>
@@ -787,11 +813,22 @@
                   </div>
                 </div>
               </div>
-              <div class="meet-people-workers__item">
+            </div>
+          </div>
+          <div
+            class="meet-people-specialization meet-people-specialization--frontend"
+          >
+            <div class="meet-people-name">
+              <div class="meet-people-name__item">
+                <p>Frontend</p>
+              </div>
+            </div>
+            <div class="meet-people-workers">
+              <div class="meet-people-workers__item people-item">
                 <div class="meet-people__job"></div>
                 <div class="meet-people-employee">
                   <div class="meet-people-employee__name">
-                    Alexandr Vanilchuk
+                    Alexey Sobolev
                   </div>
                   <div class="meet-people-employee__linkedIn-profile">
                     <a href="#">LinkedIn</a>
@@ -842,6 +879,56 @@
                 <div class="meet-people-employee">
                   <div class="meet-people-employee__name">
                     Valery Potapov
+                  </div>
+                  <div class="meet-people-employee__linkedIn-profile">
+                    <a href="#">LinkedIn</a>
+                    <a href="#"
+                      ><svg
+                        width="15"
+                        height="13"
+                        viewBox="0 0 15 13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                          stroke="#F1F1F1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="meet-people-workers__item">
+                <div class="meet-people__job"></div>
+                <div class="meet-people-employee">
+                  <div class="meet-people-employee__name">
+                    Maksym Luniak
+                  </div>
+                  <div class="meet-people-employee__linkedIn-profile">
+                    <a href="#">LinkedIn</a>
+                    <a href="#"
+                      ><svg
+                        width="15"
+                        height="13"
+                        viewBox="0 0 15 13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                          stroke="#F1F1F1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="meet-people-workers__item">
+                <div class="meet-people__job"></div>
+                <div class="meet-people-employee">
+                  <div class="meet-people-employee__name">
+                    Eugenii Schurov
                   </div>
                   <div class="meet-people-employee__linkedIn-profile">
                     <a href="#">LinkedIn</a>
@@ -948,6 +1035,31 @@
                   </div>
                 </div>
               </div>
+              <div class="meet-people-workers__item">
+                <div class="meet-people__job"></div>
+                <div class="meet-people-employee">
+                  <div class="meet-people-employee__name">
+                    Kinalevskyi Anton
+                  </div>
+                  <div class="meet-people-employee__linkedIn-profile">
+                    <a href="#">LinkedIn</a>
+                    <a href="#"
+                      ><svg
+                        width="15"
+                        height="13"
+                        viewBox="0 0 15 13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                          stroke="#F1F1F1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div
@@ -988,7 +1100,32 @@
                 <div class="meet-people__job"></div>
                 <div class="meet-people-employee">
                   <div class="meet-people-employee__name">
-                    Maria Prytuliak
+                    Tatiana Kolesneva
+                  </div>
+                  <div class="meet-people-employee__linkedIn-profile">
+                    <a href="#">LinkedIn</a>
+                    <a href="#"
+                      ><svg
+                        width="15"
+                        height="13"
+                        viewBox="0 0 15 13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 12L13 1M13 1H3M13 1L12.5 11"
+                          stroke="#F1F1F1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="meet-people-workers__item">
+                <div class="meet-people__job"></div>
+                <div class="meet-people-employee">
+                  <div class="meet-people-employee__name">
+                    Dmytro Mirov
                   </div>
                   <div class="meet-people-employee__linkedIn-profile">
                     <a href="#">LinkedIn</a>
@@ -1043,14 +1180,14 @@
               <div class="slider-item-block">
                 <div class="info-customer">
                   <div class="info-customer__name">
-                    <p>Kevin Fricke</p>
+                    <p>AcademG</p>
                   </div>
                   <div class="info-customer__company">
                     <p>Lone Star Media</p>
                   </div>
                 </div>
                 <div class="img-customer">
-                  <img src="img/CustomerImg.png" alt="Cutomer" />
+                  <iframe class="video-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -1058,14 +1195,14 @@
               <div class="slider-item-block">
                 <div class="info-customer">
                   <div class="info-customer__name">
-                    <p>Kevin Fricke</p>
+                    <p>Anton</p>
                   </div>
                   <div class="info-customer__company">
                     <p>Lone Star Media</p>
                   </div>
                 </div>
                 <div class="img-customer">
-                  <img src="img/CustomerImg.png" alt="Cutomer" />
+                  <iframe class="video-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
