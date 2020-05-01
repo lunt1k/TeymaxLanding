@@ -1,23 +1,31 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: ['./src/js/index.js'],
+  context: path.resolve(__dirname, 'src'),
+  entry: ['./js/index.js'],
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: './js/bundle.js',
   },
-  devtool: 'source-map',
+  devtool: isDev ? 'source-map' : '',
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, 'src/js'),
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: [['@babel/preset-env']],
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
+              '@babel/plugin-transform-classes',
+            ],
           },
         },
       },
@@ -29,7 +37,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          { loader: MiniCssExtractPlugin.loader },
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
@@ -48,21 +56,21 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       // Also generate a test.html
-      filename: 'index.html',
-      template: 'src/index.html',
+      minify: { collapseWhitespace: !isDev },
+      template: './index.html',
     }),
     new CopyWebpackPlugin([
       {
-        from: './src/fonts',
-        to: './fonts',
+        from: path.resolve(__dirname, 'src/fonts'),
+        to: path.resolve(__dirname, 'dist/fonts'),
       },
       {
-        from: './src/favicon',
-        to: './favicon',
+        from: path.resolve(__dirname, 'src/favicon'),
+        to: path.resolve(__dirname, 'dist/favicon'),
       },
       {
-        from: './src/img',
-        to: './img',
+        from: path.resolve(__dirname, 'src/img'),
+        to: path.resolve(__dirname, 'dist/img'),
       },
     ]),
     new MiniCssExtractPlugin({

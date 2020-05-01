@@ -14,13 +14,11 @@ let addToggle = function () {
   const winWidth = window.innerWidth;
 
   if (winWidth < 1480) {
-    console.log('harosh');
     navbar.classList.add('toogle-menu');
     if (navbar.style.paddingTop != 0) {
       navbar.style.paddingTop = '0';
     }
   } else {
-    console.log('loh');
     navbar.classList.remove('toogle-menu');
     navbar.style.paddingTop = '258px';
   }
