@@ -5,6 +5,7 @@ import elements from './elements'
 import './slider'
 import './scrollspy'
 import './toggle'
+import './request'
 // import './changerText'
 
 

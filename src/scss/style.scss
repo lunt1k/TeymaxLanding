@@ -98,13 +98,9 @@ pre {
 .title__text {
   @include displayProperties(flex, auto, unset, center, wrap);
 
-  svg {
-    padding-right: 20px;
-  }
-
   p {
     @include fontStyle(normal, 600, 16px, 140%);
-    margin: 0;
+    margin-left: 20px;
   }
 }
 
@@ -437,47 +433,73 @@ pre {
   @include fontStyle(normal, 400, 119px, 110%);
   letter-spacing: 0.03em;
   color: #f1f1f1;
-  padding-bottom: 205px;
+  padding-bottom: 150px;
   padding-top: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
 
   p {
-    animation: animate 6s linear infinite;
+    // animation: animate 6s linear infinite;
     margin: 0;
   }
 }
 
-@keyframes animate {
-  0% {
-    transform: translate(100%, 0);
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
-  100% {
-    transform: translate(-100%, 0);
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes animate-mobile {
-  0% {
-    transform: translate(100%, 0);
-  }
-
-  100% {
-    transform: translate(-250%, 0);
-  }
+.title__svg {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
 }
 
-@keyframes animate-table {
-  0% {
-    transform: translate(100%, 0);
-  }
+// @keyframes animate {
+//   0% {
+//     transform: translate(100%, 0);
+//   }
 
-  100% {
-    transform: translate(-150%, 0);
-  }
-}
+//   100% {
+//     transform: translate(-100%, 0);
+//   }
+// }
+
+// @keyframes animate-mobile {
+//   0% {
+//     transform: translate(100%, 0);
+//   }
+
+//   100% {
+//     transform: translate(-250%, 0);
+//   }
+// }
+
+// @keyframes animate-table {
+//   0% {
+//     transform: translate(100%, 0);
+//   }
+
+//   100% {
+//     transform: translate(-150%, 0);
+//   }
+// }
 
 .meet-people {
   width: 100%;
@@ -492,10 +514,6 @@ pre {
     max-width: 440px;
     padding-left: 40px;
     box-sizing: border-box;
-
-    &>.meet-people-name__item:first-child {
-      padding-top: 6.563rem;
-    }
   }
 }
 
@@ -506,9 +524,8 @@ pre {
 }
 
 .fourth-block {
-  @include displayProperties(flex, auto, unset, center, column);
+  @include displayProperties(flex, auto, flex-end, center, column);
   background-color: #181a21;
-  padding-left: 9.375rem;
 }
 
 .meet-people-name__item {
@@ -534,8 +551,12 @@ pre {
   margin: 3.125rem 0;
 }
 
+.meet-people--sales {
+  margin-top: 3.125rem;
+}
+
 .meet-people-workers__item {
-  @include displayProperties(flex, auto, unset, center, unset);
+  @include displayProperties(flex, 100%, unset, center, unset);
   transition: background-color 0.4s, color 0.4s, stroke 0.4s;
   height: 70px;
   border-bottom: 1px solid rgba(241, 241, 241, 0.3);
@@ -599,7 +620,7 @@ pre {
 }
 
 .customers-header {
-  @include displayProperties(flex, 100%, unset, unset, unset);
+  @include displayProperties(flex, 100%, center, unset, unset);
   background-color: white;
 
   .title {
@@ -625,7 +646,7 @@ pre {
 }
 
 .customers {
-  @include displayProperties(flex, 100%, unset, unset, row);
+  @include displayProperties(flex, 100%, center, unset, row);
   box-sizing: border-box;
   background-color: #fff;
 
@@ -746,7 +767,6 @@ pre {
   height: 6.25rem;
   box-sizing: border-box;
   background-color: #181a21;
-  border: 1px solid white;
 }
 
 .email-btn__link {
@@ -754,7 +774,116 @@ pre {
   height: 100%;
   padding: 0 30px;
   color: white;
-  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+#modalEmail {
+  .modal-content {
+    background-color: lightgray;
+    border-radius: 10px;
+  }
+
+  .modal__close {
+    color: black;
+  }
+
+  h2 {
+    font-weight: 800;
+    padding-bottom: 3rem;
+  }
+}
+
+$primary: #0a0a0a;
+$secondary: #bbbbbb;
+$white: rgb(0, 0, 0);
+$gray: #585656;
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+
+  textarea {
+    width: 100%;
+  }
+}
+
+.submit-email-btn {
+  margin: 20px 0;
+  background-color: rgba($color: #000000, $alpha: .7);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+  }
+
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+
+/* reset input */
+.form__field {
+
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+.email-form {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
 }
 
 .footer {
@@ -817,7 +946,7 @@ pre {
 
 .meet-people-specialization--sales {
   display: flex;
-  padding-bottom: 8.2rem;
+  padding-bottom: 11.25rem;
 }
 
 .slider-item-block {
@@ -845,14 +974,35 @@ pre {
 .img-customer {
   display: flex;
   width: 100%;
+  // max-height: 330px;
+  min-height: 187px;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.img-customer__item {
+  display: flex;
+  align-items: center;
   position: relative;
+
+  &:hover {
+    .fa-youtube {
+      color: red;
+    }
+  }
 
   iframe {
     width: 100%;
   }
 
   img {
+    min-height: 187px;
+    min-width: 330px;
+    max-width: 330px;
+
     width: 100%;
+    height: 100%;
   }
 
   button {
@@ -864,11 +1014,12 @@ pre {
     border: none;
     cursor: pointer;
     outline: none;
-
   }
 }
-.fa-youtube{
-  color: red;
+
+.fa-youtube {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease;
 }
 
 .youtube-button {
@@ -879,32 +1030,26 @@ pre {
 }
 
 .modal {
-  display: none;
-  /* Hidden by default */
+  display: flex;
+  transform: translateY(-100%);
   position: fixed;
-  /* Stay in place */
+  transition: transform 0.3s ease-in-out;
   z-index: 1000;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  /* Black w/ opacity */
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: transparent;
-  /* 15% from the top and centered */
   padding: 20px;
   width: 50%;
   height: 50%;
@@ -912,16 +1057,15 @@ pre {
   justify-content: center;
   align-items: center;
   position: relative;
-  iframe{
+
+  iframe {
     border: none;
     width: 80%;
     height: 80%;
   }
-  /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
-.close {
+.modal__close {
   color: white;
   float: right;
   font-size: 28px;
@@ -931,8 +1075,8 @@ pre {
   right: 4%;
 }
 
-.close:hover,
-.close:focus {
+.modal__close:hover,
+.modal__close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -943,7 +1087,7 @@ pre {
   overflow: hidden;
   align-self: flex-end;
   padding-top: 3.75rem;
-  padding-left: 23.125rem;
+  padding-left: 33rem;
   box-sizing: border-box;
   background-color: #fff;
 }
@@ -1117,6 +1261,12 @@ pre {
   .technologies-name {
     font-size: 4.3rem;
   }
+
+  .company-qualification {
+    h1 {
+      font-size: 3rem !important;
+    }
+  }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
@@ -1146,7 +1296,6 @@ pre {
 }
 
 @media only screen and (max-width: 640px) {
-
   .slide-wrapper {
     overflow: hidden;
   }
@@ -1237,7 +1386,7 @@ pre {
 
   .meet-people__header {
     p {
-      animation: animate-mobile 6s linear infinite;
+      // animation: animate-mobile 6s linear infinite;
     }
   }
 
@@ -1550,7 +1699,7 @@ pre {
 
   .meet-people__header {
     p {
-      animation: animate-table 6s linear infinite;
+      // animation: animate-table 6s linear infinite;
     }
   }
 
@@ -1610,6 +1759,10 @@ pre {
 @media only screen and (max-width: 1023px) {
   .technologies-name__number {
     display: flex;
+  }
+
+  .modal-content {
+    width: 100%;
   }
 
   .achievement__item {
@@ -1901,13 +2054,14 @@ pre {
   }
 }
 
-// @media only screen and (min-width: 1024px) {
-//   .fifth-block {
-//     & > .container {
-//       padding: 0 2rem 10rem 9.375rem;
-//     }
-//   }
-// }
+@media only screen and (max-width: 1048px) {
+  .img-customer {
+    img {
+      max-width: none;
+    }
+  }
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1250px) {
   .container {
     padding: 0 3rem;
@@ -1925,6 +2079,10 @@ pre {
     .container {
       flex-wrap: wrap;
     }
+  }
+
+  .modal-content {
+    width: 100%;
   }
 
   .email {
@@ -2217,7 +2375,7 @@ pre {
   }
 }
 
-@media only screen and (min-width: 1220px) and (max-width: 1480px) {
+@media only screen and (min-width: 1221px) and (max-width: 1480px) {
   // .footer {
   //   &>.container {
   //     justify-content: space-between;
@@ -2234,6 +2392,11 @@ pre {
   //   width: auto;
   //   align-items: flex-end;
   // }
+  .customers-header {
+    .title__text {
+      margin-left: 2rem;
+    }
+  }
 }
 
 @media only screen and (min-width: 1481px) and (max-width: 1620px) {
@@ -2259,7 +2422,7 @@ pre {
 
   .customers-header {
     .title__text {
-      margin-left: 2rem;
+      margin-left: 12rem;
     }
   }
 
@@ -2273,6 +2436,18 @@ pre {
   .container {
     padding-right: 2rem;
     box-sizing: border-box;
+  }
+
+  .customers {
+    .container {
+      padding: 0 2rem 0 12rem;
+      margin-left: auto;
+    }
+  }
+
+  .container-right-side {
+    padding-left: 12rem;
+    margin-left: auto;
   }
 
   // .customers-header {

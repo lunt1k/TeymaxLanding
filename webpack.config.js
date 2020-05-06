@@ -72,6 +72,10 @@ module.exports = {
         from: path.resolve(__dirname, 'src/img'),
         to: path.resolve(__dirname, 'dist/img'),
       },
+      {
+        from: path.resolve(__dirname, 'src/php'),
+        to: path.resolve(__dirname, 'dist/php'),
+      },
     ]),
     new MiniCssExtractPlugin({
       filename: 'style.css',
