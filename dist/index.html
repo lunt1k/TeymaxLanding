@@ -11,6 +11,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <script src="https://kit.fontawesome.com/8fb8cf4a71.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <style>
     .first-block {
       display: flex;
@@ -37,6 +39,8 @@
 
     .navbar-collapse__link {
       padding-left: 15px;
+      display: flex;
+      align-items: center;
       text-decoration: none;
       color: #8c8d90;
     }
@@ -102,7 +106,7 @@
                 <path d="M11.0588 18.8974C11.6855 18.2619 11.6854 17.2409 11.0586 16.6055L4.58084 10.0395L11.0606 3.4686C11.6864 2.83394 11.6868 1.81437 11.0614 1.17925C10.4229 0.530792 9.37715 0.530412 8.73814 1.17841L0.692406 9.33737C0.308445 9.72673 0.308445 10.3523 0.692405 10.7417L8.73494 18.8974C9.37402 19.5454 10.4197 19.5454 11.0588 18.8974ZM8.94098 9.09947C8.31439 9.73487 8.31439 10.7557 8.94098 11.3911L15.4192 17.9605L8.94097 24.5298C8.31439 25.1652 8.31439 26.1861 8.94098 26.8215C9.58014 27.4697 10.626 27.4696 11.2651 26.8213L19.3079 18.6625C19.6917 18.2732 19.6917 17.6478 19.3079 17.2585L11.2651 9.09967C10.626 8.4514 9.58014 8.45131 8.94098 9.09947Z" fill="#8B8C90"/>
               </svg>
             </a>
-            <a class="navbar-collapse__link" id="teymax-link" href="https://test.teymax.com/">
+            <a href="#first_section" class="navbar-collapse__link" data-scroll>
               <svg width="68" height="15" viewBox="0 0 68 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.83492 0V2.97133H5.97918V4.63293H3.83492V9.51998C3.83492 9.96307 3.93801 10.2889 4.14419 10.4974C4.36412 10.7059 4.72149 10.8102 5.21632 10.8102C5.50497 10.8102 5.75926 10.7841 5.97918 10.732V12.2958C5.6493 12.4131 5.20945 12.4718 4.65964 12.4718C3.80743 12.4718 3.13392 12.2372 2.63909 11.768C2.14426 11.2989 1.89684 10.6407 1.89684 9.79366V4.63293H0V2.97133H0.536065C1.04464 2.97133 1.42263 2.84101 1.67005 2.58036C1.93121 2.30669 2.06179 1.95482 2.06179 1.52476V0H3.83492Z" fill="#8B8C90"/>
                 <path d="M10.754 6.70504H16.1765C16.149 6.0013 15.9016 5.42789 15.4342 4.9848C14.9669 4.52867 14.3071 4.30061 13.4549 4.30061C12.6852 4.30061 12.0529 4.5417 11.5581 5.02389C11.0633 5.49305 10.7952 6.05343 10.754 6.70504ZM16.4651 9.14857L18.1352 9.69592C17.8465 10.5691 17.3105 11.2858 16.527 11.8462C15.7435 12.3936 14.7951 12.6672 13.6817 12.6672C12.2935 12.6672 11.1114 12.2176 10.1355 11.3184C9.17329 10.4062 8.69221 9.18115 8.69221 7.64335C8.69221 6.20982 9.15954 5.02389 10.0942 4.08558C11.0289 3.14726 12.1423 2.67811 13.4343 2.67811C14.9325 2.67811 16.1009 3.12771 16.9394 4.02693C17.7778 4.91312 18.197 6.10556 18.197 7.60426C18.197 7.83884 18.1833 8.03432 18.1558 8.1907H10.6921C10.7059 9.02476 10.9945 9.70895 11.5581 10.2433C12.1354 10.7776 12.8433 11.0447 13.6817 11.0447C15.0975 11.0447 16.0253 10.4127 16.4651 9.14857Z" fill="#8B8C90"/>
@@ -118,9 +122,9 @@
         </div>
         <div class="navbar-collapse">
           <ul class="navbar-collapse__list">
-            <li class="navbar-collapse__item display-none">
-              <a class="" href="#first_section" data-scroll></a>
-            </li>
+            <!-- <li class="navbar-collapse__item display-none">
+              <a href="#first_section" data-scroll></a>
+            </li> -->
             <li class="navbar-collapse__item">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path visibility="hidden" d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z" fill="#F1F1F1"/>
@@ -149,6 +153,12 @@
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path visibility="hidden" d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z" fill="#F1F1F1"/>
               </svg>
+              <a class="navbar-collapse__link navbar-collapse__link--active" href="#vacancy" data-scroll>Vacancy</a>
+            </li>
+            <li class="navbar-collapse__item">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path visibility="hidden" d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z" fill="#F1F1F1"/>
+              </svg>
               <a class="navbar-collapse__link" id="contact_link" href="#contact_us" data-scroll>Contact Us</a>
             </li>
           </ul>
@@ -169,7 +179,7 @@
             </div>
             <div class="navbar-social-links">
               <div class="navbar-social__item">
-                <a href="https://www.instagram.com/teymax.soft8/?hl=uk" target="_blank"><span>Instagram</span>
+                <a href="https://instagram.com/teymax_soft?igshid=1j3ag3i6xgm2r" target="_blank"><span>Instagram</span>
                   <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
                   </svg></a>
@@ -193,7 +203,7 @@
               <a href="tel:+380967502435"><span>+38 (096) 750 24 35</span></a>
             </div>
             <div class="navbar__address">
-              <span>7 Stepana Bandery Street, Zhytomyr</span>
+              <span>Peremohy Square 10, Zhytomyr</span>
             </div>
           </div>
         </div>
@@ -237,7 +247,7 @@
         <div class="achievement-block">
           <div class="achievement__item">
             <div class="achievement__description">
-              <span>2</span>
+              <span>3</span>
               <p>years of active work</p>
             </div>
           </div>
@@ -249,7 +259,7 @@
           </div>
           <div class="achievement__item">
             <div class="achievement__description">
-              <span>17</span>
+              <span>25</span>
               <p>company members</p>
             </div>
           </div>
@@ -536,8 +546,8 @@
                   Elizaveta Soboleva
                 </div>
                 <div class="meet-people-employee__linkedIn-profile">
-                  <a href="https://www.linkedin.com/in/katiasoboleva/" target="_blank">LinkedIn</a>
-                  <a href="https://www.linkedin.com/in/katiasoboleva/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                  <a href="https://www.linkedin.com/in/elizabeth-sobolieva-95b151202/" target="_blank">LinkedIn</a>
+                  <a href="hhttps://www.linkedin.com/in/elizabeth-sobolieva-95b151202/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
                     </svg>
                   </a>
@@ -645,6 +655,66 @@
                 </div>
               </div>
             </div>
+            <div class="meet-people-workers__item">
+              <div class="meet-people__job"></div>
+              <div class="meet-people-employee">
+                <div class="meet-people-employee__name">
+                  Denis Dubovikov
+                </div>
+                <div class="meet-people-employee__linkedIn-profile">
+                  <a href="#" target="_blank">LinkedIn</a>
+                  <a href="#" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="meet-people-workers__item">
+              <div class="meet-people__job"></div>
+              <div class="meet-people-employee">
+                <div class="meet-people-employee__name">
+                  Alexander Ovdiychuk
+                </div>
+                <div class="meet-people-employee__linkedIn-profile">
+                  <a href="#" target="_blank">LinkedIn</a>
+                  <a href="#" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="meet-people-workers__item">
+              <div class="meet-people__job"></div>
+              <div class="meet-people-employee">
+                <div class="meet-people-employee__name">
+                  Evgeny Polishchuk
+                </div>
+                <div class="meet-people-employee__linkedIn-profile">
+                  <a href="#" target="_blank">LinkedIn</a>
+                  <a href="#" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="meet-people-workers__item">
+              <div class="meet-people__job"></div>
+              <div class="meet-people-employee">
+                <div class="meet-people-employee__name">
+                  Dmitriy Puzyrenko
+                </div>
+                <div class="meet-people-employee__linkedIn-profile">
+                  <a href="https://www.linkedin.com/in/dmitry-puzyrenko-217619153/" target="_blank">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/dmitry-puzyrenko-217619153/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="meet-people-specialization meet-people-specialization--backend">
@@ -654,21 +724,6 @@
             </div>
           </div>
           <div class="meet-people-workers">
-            <div class="meet-people-workers__item">
-              <div class="meet-people__job"></div>
-              <div class="meet-people-employee">
-                <div class="meet-people-employee__name">
-                  Dmitriy Mirov
-                </div>
-                <div class="meet-people-employee__linkedIn-profile">
-                  <a href="https://www.linkedin.com/in/dmtmirov/" target="_blank">LinkedIn</a>
-                  <a href="https://www.linkedin.com/in/dmtmirov/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
             <div class="meet-people-workers__item">
               <div class="meet-people__job"></div>
               <div class="meet-people-employee">
@@ -718,11 +773,50 @@
               <div class="meet-people__job"></div>
               <div class="meet-people-employee">
                 <div class="meet-people-employee__name">
-                  Anton Kinalevskyi
+                  Eugene Yurchenko
                 </div>
                 <div class="meet-people-employee__linkedIn-profile">
-                  <a href="https://www.linkedin.com/in/anton-kinalevskyi-810100196/" target="_blank">LinkedIn</a>
-                  <a href="https://www.linkedin.com/in/anton-kinalevskyi-810100196/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                  <a href="https://www.linkedin.com/in/eugene-yurchenko-0a012a1b7/" target="_blank">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/eugene-yurchenko-0a012a1b7/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="meet-people-specialization meet-people-specialization--frontend">
+          <div class="meet-people-name">
+            <div class="meet-people-name__item">
+              <p>Mobile</p>
+            </div>
+          </div>
+          <div class="meet-people-workers">
+            <div class="meet-people-workers__item people-item">
+              <div class="meet-people__job"></div>
+              <div class="meet-people-employee">
+                <div class="meet-people-employee__name">
+                  Alex Gorelko
+                </div>
+                <div class="meet-people-employee__linkedIn-profile">
+                  <a href="https://www.linkedin.com/in/alex-horielko-730838199/" target="_blank">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/alex-horielko-730838199/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="meet-people-workers__item people-item">
+              <div class="meet-people__job"></div>
+              <div class="meet-people-employee">
+                <div class="meet-people-employee__name">
+                  Artem Sobolev
+                </div>
+                <div class="meet-people-employee__linkedIn-profile">
+                  <a href="#" target="_blank">LinkedIn</a>
+                  <a href="#" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
                     </svg>
                   </a>
@@ -761,7 +855,23 @@
               <p>Sales</p>
             </div>
           </div>
-          <div class="meet-people-workers__item meet-people--sales">
+          <div class="meet-people-workers">
+          <div class="meet-people-workers__item">
+            <div class="meet-people__job"></div>
+            <div class="meet-people-employee">
+              <div class="meet-people-employee__name">
+                Dmitriy Mirov
+              </div>
+              <div class="meet-people-employee__linkedIn-profile">
+                <a href="https://www.linkedin.com/in/dmtmirov/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/dmtmirov/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="meet-people-workers__item">
             <div class="meet-people__job"></div>
             <div class="meet-people-employee">
               <div class="meet-people-employee__name">
@@ -776,6 +886,37 @@
               </div>
             </div>
           </div>
+          <div class="meet-people-workers__item">
+            <div class="meet-people__job"></div>
+            <div class="meet-people-employee">
+              <div class="meet-people-employee__name">
+                Natalia Slepneva
+              </div>
+              <div class="meet-people-employee__linkedIn-profile">
+                <a href="https://www.linkedin.com/in/natalia-slepneva-100a1818b/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/natalia-slepneva-100a1818b/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="meet-people-workers__item">
+            <div class="meet-people__job"></div>
+            <div class="meet-people-employee">
+              <div class="meet-people-employee__name">
+                Svetlana Bezpalko
+              </div>
+              <div class="meet-people-employee__linkedIn-profile">
+                <a href="https://www.linkedin.com/in/svitlana-bezpalko-194878203/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/svitlana-bezpalko-194878203/" target="_blank"><svg width="15" height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -982,15 +1123,122 @@
       </div>
     </div>
   </section>
+  <section id="vacancy" class="vacancy">
+    <div class="container">
+      <div class="technologies">
+        <div class="title">
+          <div class="title__text">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="title__svg">
+              <path d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z" fill="#181A21"/>
+            </svg>
+            <p>Vacancy</p>
+          </div>
+        </div>
+        <h2 class="vacancy__title">Are you ready to do your best work?</h2>
+        <p class="vacancy__description">We believe great work happens when great people work together. That’s why we’re always looking for great person</p>
+        <div class="vacancy__img-wrapper">
+          <img src="img/vacancy.png" class="vacancy__img" alt="team">
+        </div>
+        <div class="vacancy-wrapper">
+          <div class="vacancy-contact">
+            <div class="vacancy__wrapper--column">
+              <div class="vacancy__subtitle">Current opened</div>
+              <span>We’re hiring. If you see something you like let us know</span>
+            </div>
+            <div class="vacancy__wrapper--column">
+              <div class="vacancy__visit">Visit or contact us</div>
+              <span class="vacancy__contact">+38 (096) 750 24 35</span>
+              <span class="vacancy__contact">Peremohy Square 10, Zhytomyr</span>
+            </div>
+          </div>
+          <div class="vacancy-vacancies">
+            <div class="vacancy__row">
+              <div class="vacancy-technologies vacancy__subtitle">Technologies</div>
+              <div class="vacancy-positions vacancy-positions--title vacancy__subtitle">Positions</div>
+            </div>
+            <div class="vacancy__item">
+              <div class="vacancy-technologies vacancy__technologie-title">Vue.js</div>
+              <div class="vacancy-positions">
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Junior Vue.js developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Middle Vue.js developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Senior Vue.js developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+              </div>
+            </div>
+            <div class="vacancy__item">
+              <div class="vacancy-technologies vacancy__technologie-title">Node.js</div>
+              <div class="vacancy-positions">
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Junior Node.js developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Middle Node.js developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Senior Node.js developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+              </div>
+            </div>
+            <div class="vacancy__item">
+              <div class="vacancy-technologies vacancy__technologie-title">React</div>
+              <div class="vacancy-positions">
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Junior React developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Middle React developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Senior React developer
+                  </div>
+                  <a href="mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com" class="vacancy__apply">Apply now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="contact_us" class="fifth-block">
     <div class="container">
       <div class="ready-discuss">
         <div class="ready-discuss__ready">
-          <p>Ready</p>
+          <p>Ready to <span class="ready-discuss__ready--bold">discuss</span></p>
         </div>
         <div class="ready-discuss__discuss">
-          <p>discuss project?</p>
+          <p>your project?</p>
         </div>
       </div>
 
@@ -1023,7 +1271,7 @@
       <div class="container container--footer-grid">
         <div class="social-media">
           <div class="social-media__item">
-            <a href="https://www.instagram.com/teymax.soft8/?hl=uk" target="_blank">Instagram
+            <a href="https://instagram.com/teymax_soft?igshid=1j3ag3i6xgm2r" target="_blank">Instagram
               <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2"/>
               </svg></a>
@@ -1058,6 +1306,9 @@
               <a href="#customers" data-scroll>Customer</a>
             </div>
             <div class="footer-nav__item">
+              <a href="#vacancy" data-scroll>Vacancy</a>
+            </div>
+            <div class="footer-nav__item">
               <a href="#contact_us" data-scroll>Contact Us</a>
             </div>
           </div>
@@ -1071,12 +1322,11 @@
             </a>
           </div>
           <div class="footer__address-company">
-            <p>7 Stepana Bandery Street, Zhytomyr</p>
+            <p>Peremohy Square 10, Zhytomyr</p>
           </div>
         </div>
       </div>
     </footer>
   </section>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
-
 </html>

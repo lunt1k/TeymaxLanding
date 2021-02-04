@@ -3,11 +3,11 @@ $(document).ready((function() {
       rules: {
           message: "required",
           email: {
-              required: !0,
-              email: !0
+              required: true,
+              email: true
           },
           name: {
-              required: !0,
+              required: true,
               minlength: 2
           }
       },
@@ -22,24 +22,18 @@ $(document).ready((function() {
               minlength: jQuery.validator.format("At least 2 characters required!")
           }
       },
-      submitHandler: function(e) {
-          $("form").submit((function() {
-              var e = $(this);
-              return $.ajax({
-                  type: "POST",
-                  url: "./php/mail.php",
-                  data: e.serialize()
-              }).done((function() {
-                  alert("Thank you!"),
-                  setTimeout((function() {
-                      e.trigger("reset")
-                  }
-                  ), 1e3)
-              }
-              )),
-              !1
-          }
-          ))
+      submitHandler: function(form) {
+        return $.ajax({
+            type: "POST",
+            url: "./php/mail.php",
+            data: $(form).serialize()
+        }).done(function() {
+            alert("Thank you!"),
+            setTimeout((function() {
+                $("#formEmail")[0].reset()
+            }), 200)
+        }),
+        false
       }
   })
 }

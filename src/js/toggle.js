@@ -27,5 +27,6 @@ Array.from(elements.navLinks).forEach((element) => {
   element.addEventListener('click', () => {
     elements.menuBtn.classList.remove('open');
     elements.navItemsBlock.classList.remove('display-show');
+    document.body.style.overflow = 'auto';
   });
 });

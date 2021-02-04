@@ -97,6 +97,10 @@ pre {
   }
 }
 
+.vacancy__description {
+  @include fontStyle(normal, bold, 16px, 165%);
+}
+
 .title__text {
   @include displayProperties(flex, auto, unset, center, wrap);
 
@@ -555,6 +559,107 @@ pre {
 
 .meet-people--sales {
   margin-top: 3.125rem;
+}
+
+.vacancy {
+  @include displayProperties(flex, 100%, unset, center, column);
+  background-color: white;
+
+  .title__text {
+    padding-top: 6rem;
+  }
+}
+
+.vacancy__title {
+  @include fontStyle(normal, bold, 119px, unset);
+  margin: 3rem 0;
+}
+
+.vacancy__description {
+  @include fontStyle(normal, 700, 16px, 26px);
+  margin: 0;
+  max-width: 440px;
+}
+
+.vacancy__img-wrapper {
+  width: 100%;
+  margin: 150px 0;
+}
+
+.vacancy__img {
+  width: 100%;
+  height: auto;
+}
+
+.vacancy-contact {
+  @include displayProperties(flex, 100%, unset, unset, column);
+  max-width: 440px;
+
+  .vacancy__wrapper--column {
+    margin-bottom: 100px;
+  }
+}
+
+.vacancy-wrapper {
+  @include displayProperties(flex, 100%, unset, unset, row);
+}
+
+.vacancy__subtitle {
+  @include fontStyle(normal, 500, 16px, 22px);
+  padding-bottom: 5px;
+}
+
+.vacancy__contact {
+  @include fontStyle(normal, 500, 16px, 16px);
+}
+
+.vacancy__wrapper--column {
+  @include displayProperties(flex, auto, unset, unset, column);
+}
+
+.vacancy__visit {
+  padding-bottom: 5px;
+}
+
+.vacancy-vacancies {
+  @include displayProperties(flex, 100%, unset, unset, column);
+}
+
+.vacancy-technologies {
+  width: 100%;
+  max-width: 370px;
+}
+
+.vacancy__row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.vacancy-positions {
+  @include displayProperties(flex, 100%, space-between, unset, column);
+}
+
+.vacancy__technologie-title {
+  @include fontStyle(normal, 400, 46px, 64.4px);
+  display: flex;
+  align-items: flex-start;
+}
+
+.vacancy__apply {
+  @include fontStyle(normal, 300, 16px, 22.4px);
+  text-decoration: none;
+  color: black;
+}
+
+.vacancy-positions-wrapper {
+  @include displayProperties(flex, 100%, space-between, unset, row);
+  padding: 10px 0;
+}
+
+.vacancy__item {
+  @include displayProperties(flex, 100%, unset, unset, row);
+  border-bottom: 1px solid #181a21;
+  margin-top: 25px;
 }
 
 .meet-people-workers__item {
@@ -1358,6 +1463,10 @@ $gray: #585656;
       font-size: 3rem !important;
     }
   }
+
+  .vacancy__title {
+    font-size: 3rem !important;
+  }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
@@ -1437,6 +1546,30 @@ $gray: #585656;
       margin: 0;
     }
   }
+
+  .vacancy__wrapper--column {
+    margin-bottom: 2rem !important;
+  }
+
+  .vacancy-vacancies {
+    margin-top: 2rem;
+  }
+
+  .vacancy-contact {
+    flex-direction: column !important;
+  }
+
+  .vacancy__item {
+    flex-direction: column;
+  }
+
+  .vacancy__technologie-title {
+    margin-bottom: 1rem;
+  }
+
+  .vacancy-positions--title {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1489,6 +1622,14 @@ $gray: #585656;
       @include fontStyle(normal, 600, 16px, 19px);
       color: #f1f1f1;
     }
+  }
+
+  .meet-people__header {
+    font-size: 5rem !important;
+  }
+
+  .vacancy-technologies {
+    max-width: 240px;
   }
 
   .navbar-contact-links {
@@ -1549,8 +1690,6 @@ $gray: #585656;
     a {
       font-size: 1.25rem;
     }
-
-    display: block;
   }
 
   .technologies-name {
@@ -1580,6 +1719,10 @@ $gray: #585656;
     padding-top: 9.563rem;
   }
 
+  .vacancy__title {
+    font-size: 3.25rem;
+  }
+
   .company-main-description {
     p {
       font-size: 1rem;
@@ -1588,6 +1731,12 @@ $gray: #585656;
     }
 
     padding: 5.125rem 0 7.313rem 0;
+  }
+
+  .vacancy__description {
+    font-size: 1rem;
+    line-height: 165%;
+    font-weight: 500;
   }
 
   .container {
@@ -1756,6 +1905,10 @@ $gray: #585656;
     padding-top: 17.313rem;
   }
 
+  .vacancy__title {
+    @include fontStyle(inherit, bold, 5.625rem, 100%);
+  }
+
   .container {
     @include paddingTablet-BorderBox();
   }
@@ -1886,6 +2039,12 @@ $gray: #585656;
 
   .ready-discuss {
     max-width: none;
+  }
+
+  .vacancy {
+    .technologies {
+      padding-bottom: 7rem;
+    }
   }
 
   // .footer-nav__links{
@@ -2073,6 +2232,8 @@ $gray: #585656;
   .meet-people__header {
     padding-bottom: 7.813rem;
     animation: none;
+    display: flex;
+    white-space: normal;
 
     // p {
     //   animation: animate-table 6s linear infinite;
@@ -2151,6 +2312,16 @@ $gray: #585656;
     img {
       max-width: none;
     }
+  }
+
+  .vacancy-wrapper {
+    flex-direction: column;
+  }
+
+  .vacancy-contact {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: none;
   }
 }
 
@@ -2470,6 +2641,12 @@ $gray: #585656;
         padding: 15px 20px 0 20px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1505px) {
+  .ready-discuss__discuss {
+    text-align: start;
   }
 }
 

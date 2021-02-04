@@ -11,6 +11,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
   <script src="https://kit.fontawesome.com/8fb8cf4a71.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <style>
     .first-block {
       display: flex;
@@ -37,6 +39,8 @@
 
     .navbar-collapse__link {
       padding-left: 15px;
+      display: flex;
+      align-items: center;
       text-decoration: none;
       color: #8c8d90;
     }
@@ -105,7 +109,7 @@
                   fill="#8B8C90" />
               </svg>
             </a>
-            <a class="navbar-collapse__link" id="teymax-link" href="https://test.teymax.com/">
+            <a href="#first_section" class="navbar-collapse__link" data-scroll>
               <svg width="68" height="15" viewBox="0 0 68 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M3.83492 0V2.97133H5.97918V4.63293H3.83492V9.51998C3.83492 9.96307 3.93801 10.2889 4.14419 10.4974C4.36412 10.7059 4.72149 10.8102 5.21632 10.8102C5.50497 10.8102 5.75926 10.7841 5.97918 10.732V12.2958C5.6493 12.4131 5.20945 12.4718 4.65964 12.4718C3.80743 12.4718 3.13392 12.2372 2.63909 11.768C2.14426 11.2989 1.89684 10.6407 1.89684 9.79366V4.63293H0V2.97133H0.536065C1.04464 2.97133 1.42263 2.84101 1.67005 2.58036C1.93121 2.30669 2.06179 1.95482 2.06179 1.52476V0H3.83492Z"
@@ -133,9 +137,9 @@
         </div>
         <div class="navbar-collapse">
           <ul class="navbar-collapse__list">
-            <li class="navbar-collapse__item display-none">
-              <a class="" href="#first_section" data-scroll></a>
-            </li>
+            <!-- <li class="navbar-collapse__item display-none">
+              <a href="#first_section" data-scroll></a>
+            </li> -->
             <li class="navbar-collapse__item">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path visibility="hidden"
@@ -174,6 +178,14 @@
                   d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z"
                   fill="#F1F1F1" />
               </svg>
+              <a class="navbar-collapse__link navbar-collapse__link--active" href="#vacancy" data-scroll>Vacancy</a>
+            </li>
+            <li class="navbar-collapse__item">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path visibility="hidden"
+                  d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z"
+                  fill="#F1F1F1" />
+              </svg>
               <a class="navbar-collapse__link" id="contact_link" href="#contact_us" data-scroll>Contact Us</a>
             </li>
           </ul>
@@ -194,7 +206,7 @@
             </div>
             <div class="navbar-social-links">
               <div class="navbar-social__item">
-                <a href="https://www.instagram.com/teymax.soft8/?hl=uk" target="_blank"><span>Instagram</span>
+                <a href="https://instagram.com/teymax_soft?igshid=1j3ag3i6xgm2r" target="_blank"><span>Instagram</span>
                   <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2" />
                   </svg></a>
@@ -218,7 +230,7 @@
               <a href="tel:+380967502435"><span>+38 (096) 750 24 35</span></a>
             </div>
             <div class="navbar__address">
-              <span>7 Stepana Bandery Street, Zhytomyr</span>
+              <span>Peremohy Square 10, Zhytomyr</span>
             </div>
           </div>
         </div>
@@ -265,7 +277,7 @@
         <div class="achievement-block">
           <div class="achievement__item">
             <div class="achievement__description">
-              <span>2</span>
+              <span>3</span>
               <p>years of active work</p>
             </div>
           </div>
@@ -277,7 +289,7 @@
           </div>
           <div class="achievement__item">
             <div class="achievement__description">
-              <span>17</span>
+              <span>25</span>
               <p>company members</p>
             </div>
           </div>
@@ -573,8 +585,8 @@
                   Elizaveta Soboleva
                 </div>
                 <div class="meet-people-employee__linkedIn-profile">
-                  <a href="https://www.linkedin.com/in/katiasoboleva/" target="_blank">LinkedIn</a>
-                  <a href="https://www.linkedin.com/in/katiasoboleva/" target="_blank"><svg width="15" height="13"
+                  <a href="https://www.linkedin.com/in/elizabeth-sobolieva-95b151202/" target="_blank">LinkedIn</a>
+                  <a href="hhttps://www.linkedin.com/in/elizabeth-sobolieva-95b151202/" target="_blank"><svg width="15" height="13"
                       viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2" />
                     </svg>
@@ -744,8 +756,8 @@
                   Dmitriy Puzyrenko
                 </div>
                 <div class="meet-people-employee__linkedIn-profile">
-                  <a href="#" target="_blank">LinkedIn</a>
-                  <a href="#" target="_blank"><svg width="15"
+                  <a href="https://www.linkedin.com/in/dmitry-puzyrenko-217619153/" target="_blank">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/dmitry-puzyrenko-217619153/" target="_blank"><svg width="15"
                       height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2" />
                     </svg>
@@ -956,8 +968,8 @@
                 Svetlana Bezpalko
               </div>
               <div class="meet-people-employee__linkedIn-profile">
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank"><svg width="15"
+                <a href="https://www.linkedin.com/in/svitlana-bezpalko-194878203/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/svitlana-bezpalko-194878203/" target="_blank"><svg width="15"
                     height="13" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2" />
                   </svg>
@@ -1211,6 +1223,116 @@
       </div>
     </div>
   </section>
+  <section id="vacancy" class="vacancy">
+    <div class="container">
+      <div class="technologies">
+        <div class="title">
+          <div class="title__text">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="title__svg">
+              <path
+                d="M7 0L8.33688 4.68445L13.0622 3.5L9.67376 7L13.0622 10.5L8.33688 9.31555L7 14L5.66312 9.31555L0.937822 10.5L4.32624 7L0.937822 3.5L5.66312 4.68445L7 0Z"
+                fill="#181A21" />
+            </svg>
+            <p>Vacancy</p>
+          </div>
+        </div>
+        <h2 class="vacancy__title">Are you ready to do your best work?</h2>
+        <p class="vacancy__description">We believe great work happens when great people work together. That’s why we’re always looking for great person</p>
+        <div class="vacancy__img-wrapper">
+          <img src="img/vacancy.png" class="vacancy__img" alt="team">
+        </div>
+        <div class="vacancy-wrapper">
+          <div class="vacancy-contact">
+            <div class="vacancy__wrapper--column">
+              <div class="vacancy__subtitle">Current opened</div>
+              <span>We’re hiring. If you see something you like let us know</span>
+            </div>
+            <div class="vacancy__wrapper--column">
+              <div class="vacancy__visit">Visit or contact us</div>
+              <span class="vacancy__contact">+38 (096) 750 24 35</span>
+              <span class="vacancy__contact">Peremohy Square 10, Zhytomyr</span>
+            </div>
+          </div>
+          <div class="vacancy-vacancies">
+            <div class="vacancy__row">
+              <div class="vacancy-technologies vacancy__subtitle">Technologies</div>
+              <div class="vacancy-positions vacancy-positions--title vacancy__subtitle">Positions</div>
+            </div>
+            <div class="vacancy__item">
+              <div class="vacancy-technologies vacancy__technologie-title">Vue.js</div>
+              <div class="vacancy-positions">
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Junior Vue.js developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Middle Vue.js developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Senior Vue.js developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+              </div>
+            </div>
+            <div class="vacancy__item">
+              <div class="vacancy-technologies vacancy__technologie-title">Node.js</div>
+              <div class="vacancy-positions">
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Junior Node.js developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Middle Node.js developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Senior Node.js developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+              </div>
+            </div>
+            <div class="vacancy__item">
+              <div class="vacancy-technologies vacancy__technologie-title">React</div>
+              <div class="vacancy-positions">
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Junior React developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Middle React developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+                <div class="vacancy-positions-wrapper">
+                  <div class="vacancy__subtitle">
+                    Senior React developer
+                  </div>
+                  <a href='mailto:alex.ostapenko.teymax@gmail.com,maksim.m@teymax.com' class="vacancy__apply">Apply now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="contact_us" class="fifth-block">
     <div class="container">
@@ -1255,7 +1377,7 @@
       <div class="container container--footer-grid">
         <div class="social-media">
           <div class="social-media__item">
-            <a href="https://www.instagram.com/teymax.soft8/?hl=uk" target="_blank">Instagram
+            <a href="https://instagram.com/teymax_soft?igshid=1j3ag3i6xgm2r" target="_blank">Instagram
               <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 12L13 1M13 1H3M13 1L12.5 11" stroke="#F1F1F1" stroke-width="2" />
               </svg></a>
@@ -1290,6 +1412,9 @@
               <a href="#customers" data-scroll>Customer</a>
             </div>
             <div class="footer-nav__item">
+              <a href="#vacancy" data-scroll>Vacancy</a>
+            </div>
+            <div class="footer-nav__item">
               <a href="#contact_us" data-scroll>Contact Us</a>
             </div>
           </div>
@@ -1303,13 +1428,11 @@
             </a>
           </div>
           <div class="footer__address-company">
-            <p>7 Stepana Bandery Street, Zhytomyr</p>
+            <p>Peremohy Square 10, Zhytomyr</p>
           </div>
         </div>
       </div>
     </footer>
   </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 </body>
 </html>
