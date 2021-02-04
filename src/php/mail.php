@@ -60,8 +60,8 @@ $headers .= "CC: sombodyelse@example.com\r\n";
 $headers .= "BCC: hidden@example.com\r\n";
 
 // mail($admin_email, adopt($form_subject), $message, $headers );
-// mail("alex.ostapenko.teymax@gmail.com", adopt($form_subject), $message, $headers );
-// mail("maksim.m@teymax.com", adopt($form_subject), $message, $headers );
+mail("alex.ostapenko.teymax@gmail.com", adopt($form_subject), $message, $headers );
+mail("maksim.m@teymax.com", adopt($form_subject), $message, $headers );
 // mail("test-wu0xw0blq@srv1.mail-tester.com", adopt($form_subject), $message, $headers );
-mail("pi59_lmo@student.ztu.edu.ua", adopt($form_subject), $message, $headers );
+// mail("pi59_lmo@student.ztu.edu.ua", adopt($form_subject), $message, $headers );
 
